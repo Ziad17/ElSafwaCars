@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3F92861-1749-4B9A-8670-2EBA6F221589}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Carproject</RootNamespace>
+    <AssemblyName>Carproject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Home\Desktop\New Version 22-3\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>34A2CFE109EB771EC67E1494C231814FDCFAFAEE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Carproject_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccUI.Designer.cs">
+      <DependentUpon>AccUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_profit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_profit.Designer.cs">
+      <DependentUpon>add_profit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_withdraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_withdraw.Designer.cs">
+      <DependentUpon>add_withdraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bill_information_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill_information_edit.Designer.cs">
+      <DependentUpon>Bill_information_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="car.cs" />
+    <Compile Include="carreturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="carreturn.Designer.cs">
+      <DependentUpon>carreturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarsEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarsEditDialog.Designer.cs">
+      <DependentUpon>CarsEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_Management.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Car_Management.Designer.cs">
+      <DependentUpon>Car_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="contr_edit_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contr_edit_details.Designer.cs">
+      <DependentUpon>contr_edit_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForms\AllTrafficForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForms\AllTrafficForm.Designer.cs">
+      <DependentUpon>AllTrafficForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForms\BillDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForms\BillDetailsForm.Designer.cs">
+      <DependentUpon>BillDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForms\RoundedGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintForms\SellingContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForms\SellingContractForm.Designer.cs">
+      <DependentUpon>SellingContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCars.Designer.cs">
+      <DependentUpon>ShowCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayInstallDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayInstallDialog.Designer.cs">
+      <DependentUpon>PayInstallDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BellUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BellUI.Designer.cs">
+      <DependentUpon>BellUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContrbuiteAlerts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContrbuiteAlerts.Designer.cs">
+      <DependentUpon>ContrbuiteAlerts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installments.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainUI.Designer.cs">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewBillSingleton.cs" />
+    <Compile Include="PartUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartUI.Designer.cs">
+      <DependentUpon>PartUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartWF.Designer.cs">
+      <DependentUpon>PartWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserChangeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserChangeUI.Designer.cs">
+      <DependentUpon>UserChangeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Bills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Bills.Designer.cs">
+      <DependentUpon>View_Bills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pay_contr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pay_contr.Designer.cs">
+      <DependentUpon>pay_contr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnOrgInstaWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnOrgInstaWF.Designer.cs">
+      <DependentUpon>UnOrgInstaWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatingFunctions.cs" />
+    <EmbeddedResource Include="AccUI.resx">
+      <DependentUpon>AccUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_profit.resx">
+      <DependentUpon>add_profit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_withdraw.resx">
+      <DependentUpon>add_withdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill_information_edit.resx">
+      <DependentUpon>Bill_information_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="carreturn.resx">
+      <DependentUpon>carreturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarsEditDialog.resx">
+      <DependentUpon>CarsEditDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car_Management.resx">
+      <DependentUpon>Car_Management.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contr_edit_details.resx">
+      <DependentUpon>contr_edit_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForms\AllTrafficForm.resx">
+      <DependentUpon>AllTrafficForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForms\BillDetailsForm.resx">
+      <DependentUpon>BillDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForms\SellingContractForm.resx">
+      <DependentUpon>SellingContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCars.resx">
+      <DependentUpon>ShowCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayInstallDialog.resx">
+      <DependentUpon>PayInstallDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BellUI.resx">
+      <DependentUpon>BellUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContrbuiteAlerts.resx">
+      <DependentUpon>ContrbuiteAlerts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI.resx">
+      <DependentUpon>MainUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartUI.resx">
+      <DependentUpon>PartUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartWF.resx">
+      <DependentUpon>PartWF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserChangeUI.resx">
+      <DependentUpon>UserChangeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Bills.resx">
+      <DependentUpon>View_Bills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pay_contr.resx">
+      <DependentUpon>pay_contr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UnOrgInstaWF.resx">
+      <DependentUpon>UnOrgInstaWF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Carproject_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calebamesbury-Classic-American-Cars-Muscle-Car-Chevrolet-Camaro-SS.ico" />
+    <Content Include="Resources\Calebamesbury-Classic-American-Cars-Muscle-Car-Chevrolet-Camaro-SS.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\pngegg.png" />
+    <None Include="Resources\png_selling.png.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
