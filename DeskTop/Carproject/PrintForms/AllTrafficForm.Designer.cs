@@ -60,6 +60,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
+            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
+            this.printDocument4 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,6 +151,7 @@
             this.selling_button.TabStop = false;
             this.selling_button.Text = "مبايعة";
             this.selling_button.UseVisualStyleBackColor = false;
+            this.selling_button.Click += new System.EventHandler(this.selling_button_Click);
             // 
             // finishing_button
             // 
@@ -165,6 +169,7 @@
             this.finishing_button.TabStop = false;
             this.finishing_button.Text = "مخالصة";
             this.finishing_button.UseVisualStyleBackColor = false;
+            this.finishing_button.Click += new System.EventHandler(this.finishing_button_Click);
             // 
             // renewal_button
             // 
@@ -182,6 +187,7 @@
             this.renewal_button.TabStop = false;
             this.renewal_button.Text = "تجديد سنوي";
             this.renewal_button.UseVisualStyleBackColor = false;
+            this.renewal_button.Click += new System.EventHandler(this.renewal_button_Click);
             // 
             // groupBox2
             // 
@@ -443,6 +449,22 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printDocument2
+            // 
+            this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
+            // 
+            // printDocument3
+            // 
+            this.printDocument3.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument3_PrintPage);
+            // 
+            // printDocument4
+            // 
+            this.printDocument4.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument4_PrintPage);
+            // 
             // AllTrafficForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,5 +530,8 @@
         private System.Windows.Forms.Button finishing_button;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Drawing.Printing.PrintDocument printDocument2;
+        private System.Drawing.Printing.PrintDocument printDocument3;
+        private System.Drawing.Printing.PrintDocument printDocument4;
     }
 }

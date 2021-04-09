@@ -29,12 +29,22 @@ namespace Carproject.PrintForms
         private string twelveTerm = "لا يحق للمشتري مطالبة البائع بأي إلتزامات مادية بعد هذا التاريخ وكذلك لا يعتبره مدنيا ولا جنائيا";
         private string threeteenTerm = "";
 
-        
 
+        List<CurrencyInfo> currencies = new List<CurrencyInfo>();
         
         public SellingContractForm()
 
         {
+
+        
+            currencies.Add(new CurrencyInfo(CurrencyInfo.Currencies.UAE));
+   
+
+         //   cboCurrency.DataSource = currencies;
+
+        //    cboCurrency_DropDownClosed(null, null);
+
+
             InitializeComponent();
             refresh_cars(re_number);
             paid_price_number_tx.Maximum = total_price_number_tx.Value;
@@ -1096,6 +1106,15 @@ rect_title_recieve, format1
         private void paid_price_number_tx_ValueChanged(object sender, EventArgs e)
         {
             remai_price_number_tx.Value = total_price_number_tx.Value - paid_price_number_tx.Value;
+            try
+            {
+                ToWord toWord = new ToWord(Convert.ToDecimal(paid_price_number_tx.Value.ToString()), currencies[0]);
+                paid_price_text_tx.Text = toWord.ConvertToArabic();
+            }
+            catch (Exception ex)
+            {
+                paid_price_text_tx.Text = String.Empty;
+            }
 
 
         }
@@ -1105,6 +1124,15 @@ rect_title_recieve, format1
             paid_price_number_tx.Maximum = total_price_number_tx.Value;
             paid_price_number_tx.Value = 0;
             remai_price_number_tx.Value = 0;
+            try
+            {
+                ToWord toWord = new ToWord(Convert.ToDecimal(total_price_number_tx.Value.ToString()),currencies[0]);
+                total_price_ext_tx.Text = toWord.ConvertToArabic();
+            }
+            catch (Exception ex)
+            {
+                total_price_ext_tx.Text = String.Empty;
+            }
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -1137,6 +1165,36 @@ rect_title_recieve, format1
             remain_price_tx.Text= "";
        penalty_tx.Text= "";
        daily_rent_tx.Value = 0;
+        }
+
+        private void remai_price_number_tx_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ToWord toWord = new ToWord(Convert.ToDecimal(remai_price_number_tx.Value.ToString()), currencies[0]);
+                remain_price_text_tx.Text = toWord.ConvertToArabic();
+            }
+            catch (Exception ex)
+            {
+                remain_price_text_tx.Text = String.Empty;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+
+            form1.button3_Click(sender, e);
+
+            button1_Click(sender, e);
+             form1.bellUI1.buyername_bill.Text = buyer_name_tx.Text;
+             form1.bellUI1.total_price_bill.Value = total_price_number_tx.Value;
+             form1.bellUI1.paid_price_bill.Value = paid_price_number_tx.Value;
+
+             form1.bellUI1.registr_radio.Checked = true;
+             form1.bellUI1.re_number.Text = re_number.Text;
+
+
         }
 
     }

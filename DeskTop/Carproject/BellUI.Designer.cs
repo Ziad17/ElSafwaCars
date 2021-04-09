@@ -543,8 +543,8 @@
             this.id_num.TabIndex = 1001;
             this.id_num.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.id_num.ThousandsSeparator = true;
-            this.id_num.ValueChanged += new System.EventHandler(this.id_num_ValueChanged);
-            this.id_num.Leave += new System.EventHandler(this.id_num_Leave);
+         //   this.id_num.ValueChanged += new System.EventHandler(this.id_num_ValueChanged);
+           // this.id_num.Leave += new System.EventHandler(this.id_num_Leave);
             this.id_num.MouseClick += new System.Windows.Forms.MouseEventHandler(this.id_num_MouseClick);
             // 
             // label1
@@ -627,7 +627,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(661, 174);
             this.dataGridView1.TabIndex = 126;
             this.dataGridView1.TabStop = false;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+         //   this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // serial
             // 
@@ -765,7 +765,7 @@
             this.re_shaseh.Size = new System.Drawing.Size(138, 32);
             this.re_shaseh.TabIndex = 11;
             this.re_shaseh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.re_shaseh.TextChanged += new System.EventHandler(this.re_shaseh_TextChanged);
+       //     this.re_shaseh.TextChanged += new System.EventHandler(this.re_shaseh_TextChanged);
             // 
             // re_model
             // 
@@ -777,7 +777,7 @@
             this.re_model.Size = new System.Drawing.Size(138, 32);
             this.re_model.TabIndex = 10;
             this.re_model.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.re_model.TextChanged += new System.EventHandler(this.re_model_TextChanged);
+      //      this.re_model.TextChanged += new System.EventHandler(this.re_model_TextChanged);
             // 
             // re_mark
             // 
@@ -789,7 +789,7 @@
             this.re_mark.Size = new System.Drawing.Size(138, 32);
             this.re_mark.TabIndex = 9;
             this.re_mark.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.re_mark.TextChanged += new System.EventHandler(this.re_mark_TextChanged);
+      //      this.re_mark.TextChanged += new System.EventHandler(this.re_mark_TextChanged);
             // 
             // re_motor
             // 
@@ -801,7 +801,7 @@
             this.re_motor.Size = new System.Drawing.Size(138, 32);
             this.re_motor.TabIndex = 8;
             this.re_motor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.re_motor.TextChanged += new System.EventHandler(this.re_motor_TextChanged);
+       //     this.re_motor.TextChanged += new System.EventHandler(this.re_motor_TextChanged);
             // 
             // re_number
             // 
@@ -949,66 +949,66 @@
 
         #endregion
 
-        private System.Windows.Forms.Button validate_button;
-        private System.Windows.Forms.Button clear_all_button;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox mark_car_bill;
-        private System.Windows.Forms.TextBox car_num_bill;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox rest_price_bill;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown paid_price_bill;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown total_price_bill;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox shaseh_num_bill;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox model_num_bill;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox motor_num_bill;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker first_pay_bill;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox notes_bill;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox restrict_sell_bill;
-        private System.Windows.Forms.TextBox insure_num_bill;
-        private System.Windows.Forms.TextBox buyer_num_bill;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox buyername_bill;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button adding_installments;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.Button validate_button;
+        public System.Windows.Forms.Button clear_all_button;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        public System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox mark_car_bill;
+        public System.Windows.Forms.TextBox car_num_bill;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.TextBox rest_price_bill;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.NumericUpDown paid_price_bill;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.NumericUpDown total_price_bill;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox shaseh_num_bill;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.TextBox model_num_bill;
+        public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.TextBox motor_num_bill;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.DateTimePicker first_pay_bill;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox notes_bill;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox restrict_sell_bill;
+        public System.Windows.Forms.TextBox insure_num_bill;
+        public System.Windows.Forms.TextBox buyer_num_bill;
+        public System.Windows.Forms.Label label20;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox buyername_bill;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.Button adding_installments;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button add_new_bill_button;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel unregister;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton unregistr_radio;
-        private System.Windows.Forms.NumericUpDown id_num;
-        private System.Windows.Forms.TableLayoutPanel register;
-        private System.Windows.Forms.TextBox re_shaseh;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox re_model;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox re_mark;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox re_motor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TableLayoutPanel unregister;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.RadioButton unregistr_radio;
+        public System.Windows.Forms.NumericUpDown id_num;
+        public System.Windows.Forms.TableLayoutPanel register;
+        public System.Windows.Forms.TextBox re_shaseh;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox re_model;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox re_mark;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox re_motor;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
         public System.Windows.Forms.ComboBox re_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn serial;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         public System.Windows.Forms.RadioButton registr_radio;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button1;
     }
 }

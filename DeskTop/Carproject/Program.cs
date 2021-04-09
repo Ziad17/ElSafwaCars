@@ -23,54 +23,56 @@ namespace Carproject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
-            //Application.Run(new PrintForms.SellingContractForm());
-            
-          //  Application.Run(new PrintForms.BillDetailsForm(1));
+          //  Application.Run(new ShowCars());
+               Application.Run(new Form1());
 
-            try
-            {
-                con.Open();
-                con.Close();
+       //     Application.Run(new PrintForms.BillDetailsForm(1));
 
-
-                Application.Run(new Form1());
-
-                string user = "root";
-                string pwd = "1234";
-                string path = @"D:\elbashaaa\backup";
-
-                //exportPath.Append(Directory.GetCurrentDirectory());
-
-                String file_name = @"\backup.sql";
-                Process m = new Process();
-                m.StartInfo.FileName = "cmd.exe";
-
-                m.StartInfo.UseShellExecute = false;
-                m.StartInfo.WorkingDirectory = @"C:\xampp\mysql\bin\";
-                m.StartInfo.RedirectStandardInput = true;
-
-                m.StartInfo.RedirectStandardOutput = true;
-                m.Start();
-                streamwriter = m.StandardInput;
-                streamreader = m.StandardOutput;
-                streamwriter.WriteLine("mysqldump -u user -p" + pwd + "  -h localhost elbashacars > " + path + file_name);
-                streamwriter.Close();
-                m.WaitForExit();
-                m.Close();
+            //try
+            //{
+            //    con.Open();
+            //    con.Close();
 
 
-            }
+            //    Application.Run(new Form1());
+
+            //    string user = "root";
+            //    string pwd = "1234";
+            //    string path = @"D:\elbashaaa\backup";
+
+            //    //exportPath.Append(Directory.GetCurrentDirectory());
+
+            //    String file_name = @"\backup.sql";
+            //    Process m = new Process();
+            //    m.StartInfo.FileName = "cmd.exe";
+
+            //    m.StartInfo.UseShellExecute = false;
+            //    m.StartInfo.WorkingDirectory = @"C:\xampp\mysql\bin\";
+            //    m.StartInfo.RedirectStandardInput = true;
+
+            //    m.StartInfo.RedirectStandardOutput = true;
+            //    m.Start();
+            //    streamwriter = m.StandardInput;
+            //    streamreader = m.StandardOutput;
+            //    streamwriter.WriteLine("mysqldump -u user -p" + pwd + "  -h localhost elbashacars > " + path + file_name);
+            //    streamwriter.Close();
+            //    m.WaitForExit();
+            //    m.Close();
+
+
+            //}
 
 
 
 
 
-            catch (Exception ee)
-            {
-                 MessageBox.Show("قاعدة البيانات معطلة");
+            //catch (Exception ee)
+            //{
+            //   // MessageBox.Show("قاعدة البيانات معطلة");
+            //    MessageBox.Show(ee.ToString());
 
 
-            }
+            //}
         }
 
     }

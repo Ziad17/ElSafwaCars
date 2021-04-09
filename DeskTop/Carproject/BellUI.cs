@@ -599,26 +599,14 @@ namespace Carproject
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void id_num_ValueChanged(object sender, EventArgs e)
-        {
-           
-
-        }
+     
 
         private void id_num_MouseClick(object sender, MouseEventArgs e)
         {
             id_num.Select(0, id_num.Text.Length);
         }
 
-        private void id_num_Leave(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void total_price_bill_MouseClick(object sender, MouseEventArgs e)
         {
@@ -631,25 +619,7 @@ namespace Carproject
 
         }
 
-        private void re_motor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void re_mark_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void re_model_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void re_shaseh_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {

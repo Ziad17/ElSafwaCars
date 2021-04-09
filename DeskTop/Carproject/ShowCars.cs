@@ -263,6 +263,13 @@ namespace Carproject
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            PrintForms.PrintCarsForm form = new PrintForms.PrintCarsForm();
+            form.button3_Click(sender, e);
+        }
+
         
 
 

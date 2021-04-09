@@ -132,6 +132,7 @@
     <Compile Include="contr_edit_details.Designer.cs">
       <DependentUpon>contr_edit_details.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrencyInfo.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +156,12 @@
     </Compile>
     <Compile Include="PrintForms\BillDetailsForm.Designer.cs">
       <DependentUpon>BillDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForms\PrintCarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForms\PrintCarsForm.Designer.cs">
+      <DependentUpon>PrintCarsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintForms\RoundedGridView.cs">
       <SubType>Component</SubType>
@@ -233,6 +240,7 @@
     <Compile Include="PartWF.Designer.cs">
       <DependentUpon>PartWF.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToWord.cs" />
     <Compile Include="UserChangeUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrintForms\BillDetailsForm.resx">
       <DependentUpon>BillDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForms\PrintCarsForm.resx">
+      <DependentUpon>PrintCarsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintForms\SellingContractForm.resx">
       <DependentUpon>SellingContractForm.cs</DependentUpon>
@@ -408,6 +419,8 @@
     <Content Include="Resources\Calebamesbury-Classic-American-Cars-Muscle-Car-Chevrolet-Camaro-SS.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\template_m_h.jpg" />
+    <None Include="Resources\template_m_h.bmp" />
     <None Include="Resources\pngegg.png" />
     <None Include="Resources\png_selling.png.bmp" />
   </ItemGroup>

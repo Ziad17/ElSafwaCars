@@ -168,7 +168,7 @@ namespace Carproject
                     con.Open();
                     MySqlCommand cmd = con.CreateCommand();
                     string command;
-                    command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,bills.Notes FROM bills WHERE bills.id=@id;";
+                    command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes FROM bills WHERE bills.id=@id;";
 
                     cmd.CommandText = command;
                     cmd.Parameters.AddWithValue("@id", ValidatingFunctions.id_from_payinstall_to_alerts);
@@ -193,8 +193,10 @@ namespace Carproject
                         bill_search.Columns[8].HeaderText = " مدفوع";
                         bill_search.Columns[9].HeaderText = " متبقي";
                         bill_search.Columns[10].HeaderText = "جارية";
+                        bill_search.Columns[11].HeaderText = "إجمالي المتبقي";
+                        bill_search.Columns[11].Width += 10;
 
-                        bill_search.Columns[11].HeaderText = "ملاحظات";
+                        bill_search.Columns[12].HeaderText = "ملاحظات";
 
 
 
@@ -253,7 +255,7 @@ namespace Carproject
                     MySqlDataAdapter rd;
 
 
-                    command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,bills.Notes   FROM bills WHERE bills.id=@id;";
+                    command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes  FROM bills WHERE bills.id=@id;";
                                 
                                 cmd.CommandText = command;
                                 cmd.Parameters.AddWithValue("@id", id_to_go);
@@ -280,9 +282,10 @@ namespace Carproject
                         bill_search.Columns[8].HeaderText = " مدفوع";
                         bill_search.Columns[9].HeaderText = " متبقي";
                         bill_search.Columns[10].HeaderText = "جارية";
+                        bill_search.Columns[11].HeaderText = "إجمالي المتبقي";
+                        bill_search.Columns[11].Width += 10;
 
-                        bill_search.Columns[11].HeaderText = "ملاحظات";
-
+                        bill_search.Columns[12].HeaderText = "ملاحظات";
 
                         fill_information(id_to_go);
 
@@ -332,7 +335,7 @@ namespace Carproject
                             {
                                 search_name = (ComboBox)arr_options.ElementAt<Control>(index);
                                 string name = name_search.Text;
-                                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,bills.Notes FROM bills WHERE bills.Buyer_name Like @name;";
+                                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes  FROM bills WHERE bills.Buyer_name Like @name;";
                                 
                                                                                   
                                 cmd.CommandText = command;
@@ -342,7 +345,7 @@ namespace Carproject
                             {
                                 search_id = (NumericUpDown)arr_options.ElementAt<Control>(index);
                                 string id = search_id.Value.ToString();
-                                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,bills.Notes   FROM bills WHERE bills.id=@id;";
+                                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes  FROM bills WHERE bills.id=@id;";
                                 
                                 cmd.CommandText = command;
                                 cmd.Parameters.AddWithValue("@id", id);
@@ -351,7 +354,7 @@ namespace Carproject
                             {
                                 search_date = (DateTimePicker)arr_options.ElementAt<Control>(index);
                                 DateTime date = search_date.Value.Date;
-                                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,bills.Notes   FROM bills WHERE bills.created_date=@date;";
+                                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes  FROM bills WHERE bills.created_date=@date;";
                                 
                                 cmd.CommandText = command;
                                 cmd.Parameters.AddWithValue("@date", date);
@@ -380,9 +383,10 @@ namespace Carproject
                         bill_search.Columns[8].HeaderText = " مدفوع";
                         bill_search.Columns[9].HeaderText = " متبقي";
                         bill_search.Columns[10].HeaderText = "جارية";
+                        bill_search.Columns[11].HeaderText = "إجمالي المتبقي";
 
-                        bill_search.Columns[11].HeaderText = "ملاحظات";
-
+                        bill_search.Columns[12].HeaderText = "ملاحظات";
+                        bill_search.Columns[11].Width += 10;
 
 
 
@@ -814,7 +818,7 @@ namespace Carproject
                 con.Open();
                 MySqlCommand cmd = con.CreateCommand();
                 string command;
-                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,bills.Notes  FROM bills;";
+                command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes  FROM bills;";
             
                 cmd.CommandText = command;
                 cmd.Parameters.AddWithValue("@id", ValidatingFunctions.id_from_payinstall_to_alerts);
@@ -839,8 +843,11 @@ namespace Carproject
                     bill_search.Columns[8].HeaderText = " مدفوع";
                     bill_search.Columns[9].HeaderText = " متبقي";
                     bill_search.Columns[10].HeaderText = "جارية";
+                    bill_search.Columns[11].HeaderText = "إجمالي المتبقي";
+                    bill_search.Columns[11].Width+=10 ;
 
-                    bill_search.Columns[11].HeaderText = "ملاحظات";
+                    bill_search.Columns[12].HeaderText = "ملاحظات";
+
 
 
                      

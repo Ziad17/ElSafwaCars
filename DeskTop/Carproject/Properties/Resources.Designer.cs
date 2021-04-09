@@ -101,5 +101,15 @@ namespace Carproject.Properties {
                 return ResourceManager.GetString("Settings_Designer", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_m_h {
+            get {
+                object obj = ResourceManager.GetObject("template_m_h", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

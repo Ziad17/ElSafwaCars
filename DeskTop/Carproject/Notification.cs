@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Linq; 
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -129,41 +129,45 @@ namespace Carproject
         }
 
         private void installs_pinned_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {   
-             
-             if (e.RowIndex<=-1)
-             { return; }
-             else
-             {
-                 if (ValidatingFunctions.getLOGIN_TOKEN() == true)
-                 {
-                     if (installs_pinned.Rows.Count > 0)
-                     {
+        {
+            try
+            {
+                if (e.RowIndex <= -1)
+                { return; }
+                else
+                {
+                    if (ValidatingFunctions.getLOGIN_TOKEN() == true)
+                    {
+                        if (installs_pinned.Rows.Count > 0)
+                        {
 
-                         int index = installs_pinned.SelectedRows[0].Index;
+                            int index = installs_pinned.SelectedRows[0].Index;
 
-                         int id = int.Parse(installs_pinned.Rows[index].Cells[0].Value.ToString());
-                         DateTime date = (DateTime)installs_pinned.Rows[index].Cells[4].Value;
-                         ValidatingFunctions.date_from_payinstall_to_alerts = date;
-                         ValidatingFunctions.id_from_payinstall_to_alerts = id;
-                         PayInstallDialog dg = new PayInstallDialog();
-                         dg.ShowDialog();
-                         this.Close();
-                         //Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
-                         //form1.payinstall2.View_install_by_id(id);
-                         //form1.payinstall2.BringToFront();
-                         //form1.Sidepanel.Height = form1.button6.Height;
-                         //form1.Sidepanel.Top = form1.button6.Top;
-                        
+                            int id = int.Parse(installs_pinned.Rows[index].Cells[0].Value.ToString());
+                            DateTime date = (DateTime)installs_pinned.Rows[index].Cells[4].Value;
+                            ValidatingFunctions.date_from_payinstall_to_alerts = date;
+                            ValidatingFunctions.id_from_payinstall_to_alerts = id;
+                            PayInstallDialog dg = new PayInstallDialog();
+                            dg.ShowDialog();
+                            this.Close();
+                            //Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                            //form1.payinstall2.View_install_by_id(id);
+                            //form1.payinstall2.BringToFront();
+                            //form1.Sidepanel.Height = form1.button6.Height;
+                            //form1.Sidepanel.Top = form1.button6.Top;
 
-                     }
-                 }
-                 else
-                 {
-                     login login_form = new login();
-                     login_form.Show();
-                 }
-             }
+
+                        }
+                    }
+                    else
+                    {
+                        login login_form = new login();
+                        login_form.Show();
+                    }
+                }
+            }
+            catch (ArgumentOutOfRangeException es)
+            { }
 
         }
 

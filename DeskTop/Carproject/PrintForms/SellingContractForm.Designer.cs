@@ -95,6 +95,7 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox_time = new System.Windows.Forms.CheckBox();
             this.checkBox_date = new System.Windows.Forms.CheckBox();
@@ -117,7 +118,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Arabic Typesetting", 34.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
-            this.label2.Location = new System.Drawing.Point(782, 11);
+            this.label2.Location = new System.Drawing.Point(746, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 53);
             this.label2.TabIndex = 11;
@@ -635,6 +636,7 @@
             this.remai_price_number_tx.TabIndex = 1033;
             this.remai_price_number_tx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.remai_price_number_tx.ThousandsSeparator = true;
+            this.remai_price_number_tx.ValueChanged += new System.EventHandler(this.remai_price_number_tx_ValueChanged);
             // 
             // label27
             // 
@@ -876,7 +878,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(556, 33);
+            this.button1.Location = new System.Drawing.Point(435, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 44);
             this.button1.TabIndex = 1006;
@@ -915,6 +917,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button4);
             this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Location = new System.Drawing.Point(12, 750);
@@ -922,6 +925,24 @@
             this.groupBox6.Size = new System.Drawing.Size(1021, 104);
             this.groupBox6.TabIndex = 1012;
             this.groupBox6.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button4.Location = new System.Drawing.Point(644, 33);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 44);
+            this.button4.TabIndex = 1008;
+            this.button4.TabStop = false;
+            this.button4.Text = "حفظ وأضافة فاتورة";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -932,7 +953,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(344, 33);
+            this.button2.Location = new System.Drawing.Point(223, 33);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 44);
             this.button2.TabIndex = 1007;
@@ -974,7 +995,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1062, 566);
+            this.ClientSize = new System.Drawing.Size(1079, 566);
             this.Controls.Add(this.checkBox_time);
             this.Controls.Add(this.checkBox_date);
             this.Controls.Add(this.groupBox6);
@@ -1089,5 +1110,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox checkBox_date;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -400,7 +400,7 @@
         private MainUI mainUI1;
         private Car_Management showcars1;
         private AccUI accUI1;
-        private BellUI bellUI1;
+        public BellUI bellUI1;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button button10;
         public PrintForm printForm;

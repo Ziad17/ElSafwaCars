@@ -52,14 +52,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Carproject.exe" size="2418688">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Carproject.exe" size="2891264">
       <assemblyIdentity name="Carproject" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Wbxw1G5XEElzN83MSi78KZ+pyUG+fqe3DO74O7rK7KY=</dsig:DigestValue>
+        <dsig:DigestValue>MCITp6VrMW+oNneWma9VSjK9Un908+oM7zapunndck4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
