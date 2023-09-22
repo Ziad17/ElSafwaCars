@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Globalization;
 using System.IO;
+using Carproject.UI.Froms;
 using MySql.Data.MySqlClient;
 
 namespace Carproject
@@ -23,10 +19,10 @@ namespace Carproject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
-          //  Application.Run(new ShowCars());
-               Application.Run(new Form1());
+            //  Application.Run(new ShowCars());
+            Application.Run(new Form1());
 
-       //     Application.Run(new PrintForms.BillDetailsForm(1));
+            //     Application.Run(new PrintForms.BillDetailsForm(1));
 
             //try
             //{
@@ -131,6 +127,6 @@ namespace Carproject
 //    Auth_date DATETIME,
 //    Created_date  DATETIME,
 //    Created_time  DATETIME 
-    
-    
+
+
 //);

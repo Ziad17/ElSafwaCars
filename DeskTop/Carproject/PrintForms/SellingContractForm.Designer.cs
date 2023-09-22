@@ -118,7 +118,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Arabic Typesetting", 34.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
-            this.label2.Location = new System.Drawing.Point(974, 18);
+            this.label2.Location = new System.Drawing.Point(932, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(270, 67);
@@ -173,9 +173,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(16, 98);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(1361, 98);
             this.groupBox1.TabIndex = 28;
@@ -190,7 +190,7 @@
             this.seller_address_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.seller_address_tx.FormattingEnabled = true;
             this.seller_address_tx.Location = new System.Drawing.Point(8, 38);
-            this.seller_address_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.seller_address_tx.Margin = new System.Windows.Forms.Padding(4);
             this.seller_address_tx.Name = "seller_address_tx";
             this.seller_address_tx.Size = new System.Drawing.Size(519, 33);
             this.seller_address_tx.Sorted = true;
@@ -203,7 +203,7 @@
             this.seller_card_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.seller_card_tx.FormattingEnabled = true;
             this.seller_card_tx.Location = new System.Drawing.Point(645, 38);
-            this.seller_card_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.seller_card_tx.Margin = new System.Windows.Forms.Padding(4);
             this.seller_card_tx.Name = "seller_card_tx";
             this.seller_card_tx.Size = new System.Drawing.Size(237, 33);
             this.seller_card_tx.Sorted = true;
@@ -216,7 +216,7 @@
             this.seller_name_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.seller_name_tx.FormattingEnabled = true;
             this.seller_name_tx.Location = new System.Drawing.Point(1025, 38);
-            this.seller_name_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.seller_name_tx.Margin = new System.Windows.Forms.Padding(4);
             this.seller_name_tx.Name = "seller_name_tx";
             this.seller_name_tx.Size = new System.Drawing.Size(237, 33);
             this.seller_name_tx.Sorted = true;
@@ -231,9 +231,9 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(16, 204);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(1361, 84);
             this.groupBox2.TabIndex = 29;
@@ -247,7 +247,7 @@
             this.buyer_address_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.buyer_address_tx.FormattingEnabled = true;
             this.buyer_address_tx.Location = new System.Drawing.Point(8, 26);
-            this.buyer_address_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buyer_address_tx.Margin = new System.Windows.Forms.Padding(4);
             this.buyer_address_tx.Name = "buyer_address_tx";
             this.buyer_address_tx.Size = new System.Drawing.Size(519, 33);
             this.buyer_address_tx.Sorted = true;
@@ -260,7 +260,7 @@
             this.buyer_card_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.buyer_card_tx.FormattingEnabled = true;
             this.buyer_card_tx.Location = new System.Drawing.Point(645, 31);
-            this.buyer_card_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buyer_card_tx.Margin = new System.Windows.Forms.Padding(4);
             this.buyer_card_tx.Name = "buyer_card_tx";
             this.buyer_card_tx.Size = new System.Drawing.Size(237, 33);
             this.buyer_card_tx.Sorted = true;
@@ -273,7 +273,7 @@
             this.buyer_name_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.buyer_name_tx.FormattingEnabled = true;
             this.buyer_name_tx.Location = new System.Drawing.Point(1025, 32);
-            this.buyer_name_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buyer_name_tx.Margin = new System.Windows.Forms.Padding(4);
             this.buyer_name_tx.Name = "buyer_name_tx";
             this.buyer_name_tx.Size = new System.Drawing.Size(237, 33);
             this.buyer_name_tx.Sorted = true;
@@ -321,7 +321,7 @@
             this.date_tx.CustomFormat = "";
             this.date_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_tx.Location = new System.Drawing.Point(723, 46);
-            this.date_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.date_tx.Margin = new System.Windows.Forms.Padding(4);
             this.date_tx.Name = "date_tx";
             this.date_tx.Size = new System.Drawing.Size(184, 38);
             this.date_tx.TabIndex = 30;
@@ -346,7 +346,7 @@
             this.time_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.time_tx.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.time_tx.Location = new System.Drawing.Point(329, 46);
-            this.time_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.time_tx.Margin = new System.Windows.Forms.Padding(4);
             this.time_tx.Name = "time_tx";
             this.time_tx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.time_tx.ShowUpDown = true;
@@ -385,9 +385,9 @@
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Location = new System.Drawing.Point(16, 306);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox3.Size = new System.Drawing.Size(1361, 165);
             this.groupBox3.TabIndex = 34;
@@ -402,7 +402,7 @@
             this.re_shaseh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_shaseh.FormattingEnabled = true;
             this.re_shaseh.Location = new System.Drawing.Point(8, 37);
-            this.re_shaseh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_shaseh.Margin = new System.Windows.Forms.Padding(4);
             this.re_shaseh.Name = "re_shaseh";
             this.re_shaseh.Size = new System.Drawing.Size(183, 33);
             this.re_shaseh.Sorted = true;
@@ -415,7 +415,7 @@
             this.re_color.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_color.FormattingEnabled = true;
             this.re_color.Location = new System.Drawing.Point(1080, 105);
-            this.re_color.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_color.Margin = new System.Windows.Forms.Padding(4);
             this.re_color.Name = "re_color";
             this.re_color.Size = new System.Drawing.Size(183, 33);
             this.re_color.Sorted = true;
@@ -428,7 +428,7 @@
             this.re_shape.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_shape.FormattingEnabled = true;
             this.re_shape.Location = new System.Drawing.Point(803, 106);
-            this.re_shape.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_shape.Margin = new System.Windows.Forms.Padding(4);
             this.re_shape.Name = "re_shape";
             this.re_shape.Size = new System.Drawing.Size(183, 33);
             this.re_shape.Sorted = true;
@@ -441,7 +441,7 @@
             this.re_kind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_kind.FormattingEnabled = true;
             this.re_kind.Location = new System.Drawing.Point(549, 105);
-            this.re_kind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_kind.Margin = new System.Windows.Forms.Padding(4);
             this.re_kind.Name = "re_kind";
             this.re_kind.Size = new System.Drawing.Size(183, 33);
             this.re_kind.Sorted = true;
@@ -454,7 +454,7 @@
             this.re_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_model.FormattingEnabled = true;
             this.re_model.Location = new System.Drawing.Point(297, 37);
-            this.re_model.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_model.Margin = new System.Windows.Forms.Padding(4);
             this.re_model.Name = "re_model";
             this.re_model.Size = new System.Drawing.Size(183, 33);
             this.re_model.Sorted = true;
@@ -467,7 +467,7 @@
             this.re_mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_mark.FormattingEnabled = true;
             this.re_mark.Location = new System.Drawing.Point(549, 37);
-            this.re_mark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_mark.Margin = new System.Windows.Forms.Padding(4);
             this.re_mark.Name = "re_mark";
             this.re_mark.Size = new System.Drawing.Size(183, 33);
             this.re_mark.Sorted = true;
@@ -480,7 +480,7 @@
             this.re_motor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_motor.FormattingEnabled = true;
             this.re_motor.Location = new System.Drawing.Point(803, 39);
-            this.re_motor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_motor.Margin = new System.Windows.Forms.Padding(4);
             this.re_motor.Name = "re_motor";
             this.re_motor.Size = new System.Drawing.Size(183, 33);
             this.re_motor.Sorted = true;
@@ -537,7 +537,7 @@
             this.re_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.re_number.FormattingEnabled = true;
             this.re_number.Location = new System.Drawing.Point(1080, 41);
-            this.re_number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.re_number.Margin = new System.Windows.Forms.Padding(4);
             this.re_number.Name = "re_number";
             this.re_number.Size = new System.Drawing.Size(183, 33);
             this.re_number.Sorted = true;
@@ -593,7 +593,7 @@
             this.total_price_number_tx.BackColor = System.Drawing.SystemColors.Window;
             this.total_price_number_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_price_number_tx.Location = new System.Drawing.Point(991, 21);
-            this.total_price_number_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.total_price_number_tx.Margin = new System.Windows.Forms.Padding(4);
             this.total_price_number_tx.Maximum = new decimal(new int[] {
             1410065419,
             2,
@@ -634,9 +634,9 @@
             this.groupBox4.Controls.Add(this.total_price_number_tx);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Location = new System.Drawing.Point(16, 479);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox4.Size = new System.Drawing.Size(1361, 304);
             this.groupBox4.TabIndex = 1004;
@@ -648,7 +648,7 @@
             this.remain_price_text_tx.BackColor = System.Drawing.SystemColors.Window;
             this.remain_price_text_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.remain_price_text_tx.Location = new System.Drawing.Point(8, 143);
-            this.remain_price_text_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.remain_price_text_tx.Margin = new System.Windows.Forms.Padding(4);
             this.remain_price_text_tx.Name = "remain_price_text_tx";
             this.remain_price_text_tx.Size = new System.Drawing.Size(813, 32);
             this.remain_price_text_tx.TabIndex = 1034;
@@ -670,7 +670,7 @@
             this.remai_price_number_tx.BackColor = System.Drawing.SystemColors.Window;
             this.remai_price_number_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remai_price_number_tx.Location = new System.Drawing.Point(991, 143);
-            this.remai_price_number_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.remai_price_number_tx.Margin = new System.Windows.Forms.Padding(4);
             this.remai_price_number_tx.Maximum = new decimal(new int[] {
             1410065519,
             2,
@@ -700,7 +700,7 @@
             this.remain_price_tx.BackColor = System.Drawing.SystemColors.Window;
             this.remain_price_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.remain_price_tx.Location = new System.Drawing.Point(8, 219);
-            this.remain_price_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.remain_price_tx.Margin = new System.Windows.Forms.Padding(4);
             this.remain_price_tx.Multiline = true;
             this.remain_price_tx.Name = "remain_price_tx";
             this.remain_price_tx.Size = new System.Drawing.Size(1167, 77);
@@ -723,7 +723,7 @@
             this.paid_price_text_tx.BackColor = System.Drawing.SystemColors.Window;
             this.paid_price_text_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.paid_price_text_tx.Location = new System.Drawing.Point(8, 82);
-            this.paid_price_text_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paid_price_text_tx.Margin = new System.Windows.Forms.Padding(4);
             this.paid_price_text_tx.Name = "paid_price_text_tx";
             this.paid_price_text_tx.Size = new System.Drawing.Size(813, 32);
             this.paid_price_text_tx.TabIndex = 1032;
@@ -745,7 +745,7 @@
             this.paid_price_number_tx.BackColor = System.Drawing.SystemColors.Window;
             this.paid_price_number_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paid_price_number_tx.Location = new System.Drawing.Point(991, 82);
-            this.paid_price_number_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paid_price_number_tx.Margin = new System.Windows.Forms.Padding(4);
             this.paid_price_number_tx.Maximum = new decimal(new int[] {
             1000000011,
             0,
@@ -774,7 +774,7 @@
             this.total_price_ext_tx.BackColor = System.Drawing.SystemColors.Window;
             this.total_price_ext_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.total_price_ext_tx.Location = new System.Drawing.Point(8, 22);
-            this.total_price_ext_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.total_price_ext_tx.Margin = new System.Windows.Forms.Padding(4);
             this.total_price_ext_tx.Name = "total_price_ext_tx";
             this.total_price_ext_tx.Size = new System.Drawing.Size(813, 32);
             this.total_price_ext_tx.TabIndex = 1030;
@@ -803,9 +803,9 @@
             this.groupBox5.Controls.Add(this.auth_date_tx);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Location = new System.Drawing.Point(16, 790);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(1361, 126);
             this.groupBox5.TabIndex = 1005;
@@ -819,7 +819,7 @@
             this.penalty_tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.penalty_tx.FormattingEnabled = true;
             this.penalty_tx.Location = new System.Drawing.Point(689, 70);
-            this.penalty_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.penalty_tx.Margin = new System.Windows.Forms.Padding(4);
             this.penalty_tx.Name = "penalty_tx";
             this.penalty_tx.Size = new System.Drawing.Size(416, 33);
             this.penalty_tx.Sorted = true;
@@ -832,7 +832,7 @@
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Font = new System.Drawing.Font("Arabic Typesetting", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBox2.Location = new System.Drawing.Point(432, 66);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(203, 39);
@@ -847,7 +847,7 @@
             this.checkBox_auth.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_auth.Font = new System.Drawing.Font("Arabic Typesetting", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBox_auth.Location = new System.Drawing.Point(381, 79);
-            this.checkBox_auth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_auth.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_auth.Name = "checkBox_auth";
             this.checkBox_auth.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox_auth.Size = new System.Drawing.Size(18, 17);
@@ -859,7 +859,7 @@
             this.daily_rent_tx.BackColor = System.Drawing.SystemColors.Window;
             this.daily_rent_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daily_rent_tx.Location = new System.Drawing.Point(1167, 70);
-            this.daily_rent_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.daily_rent_tx.Margin = new System.Windows.Forms.Padding(4);
             this.daily_rent_tx.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -892,7 +892,7 @@
             this.button3.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button3.Location = new System.Drawing.Point(608, 207);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 54);
             this.button3.TabIndex = 1006;
@@ -918,7 +918,7 @@
             this.auth_date_tx.CustomFormat = "";
             this.auth_date_tx.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.auth_date_tx.Location = new System.Drawing.Point(143, 65);
-            this.auth_date_tx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.auth_date_tx.Margin = new System.Windows.Forms.Padding(4);
             this.auth_date_tx.Name = "auth_date_tx";
             this.auth_date_tx.Size = new System.Drawing.Size(229, 38);
             this.auth_date_tx.TabIndex = 1006;
@@ -945,7 +945,7 @@
             this.button1.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Location = new System.Drawing.Point(580, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 54);
             this.button1.TabIndex = 1006;
@@ -975,7 +975,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Arabic Typesetting", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBox1.Location = new System.Drawing.Point(16, 46);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(202, 39);
@@ -989,9 +989,9 @@
             this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Location = new System.Drawing.Point(16, 923);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(1361, 128);
             this.groupBox6.TabIndex = 1012;
             this.groupBox6.TabStop = false;
@@ -1006,7 +1006,7 @@
             this.button4.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button4.Location = new System.Drawing.Point(859, 41);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 54);
             this.button4.TabIndex = 1008;
@@ -1025,7 +1025,7 @@
             this.button2.Font = new System.Drawing.Font("Arabic Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Location = new System.Drawing.Point(297, 41);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 54);
             this.button2.TabIndex = 1007;
@@ -1041,7 +1041,7 @@
             this.checkBox_time.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_time.Font = new System.Drawing.Font("Arabic Typesetting", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBox_time.Location = new System.Drawing.Point(655, 58);
-            this.checkBox_time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_time.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_time.Name = "checkBox_time";
             this.checkBox_time.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox_time.Size = new System.Drawing.Size(18, 17);
@@ -1055,7 +1055,7 @@
             this.checkBox_date.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_date.Font = new System.Drawing.Font("Arabic Typesetting", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBox_date.Location = new System.Drawing.Point(979, 54);
-            this.checkBox_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_date.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_date.Name = "checkBox_date";
             this.checkBox_date.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox_date.Size = new System.Drawing.Size(18, 17);
@@ -1085,7 +1085,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1431, 1220);
             this.MinimizeBox = false;
