@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Carproject.Entities;
 
 public partial class Contr
 {
+    [Key]
     public uint Id { get; set; }
 
     public string Name { get; set; } = null!;

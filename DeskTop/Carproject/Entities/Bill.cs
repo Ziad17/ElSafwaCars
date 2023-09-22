@@ -1,12 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Carproject.Entities;
 
-public partial class Bill
+[Table("bills")]
+public class Bill
 {
-    public uint Id { get; set; }
+    [Column("id")]
+    [Key]
+    public int Id { get; set; }
 
+    [Column("Buyer_name")]
     public string? BuyerName { get; set; }
 
     public string BuyerPhone { get; set; } = null!;
@@ -37,13 +42,13 @@ public partial class Bill
 
     public bool Dead { get; set; }
 
-    public virtual Car? CarNumberNavigation { get; set; }
+    //public virtual Car? CarNumberNavigation { get; set; }
 
-    public virtual ICollection<Car> Cars { get; set; } = new List<Car>();
+    //public virtual ICollection<Car> Cars { get; set; } = new List<Car>();
 
-    public virtual ICollection<Install> Installs { get; set; } = new List<Install>();
+    //public virtual ICollection<Install> Installs { get; set; } = new List<Install>();
 
-    public virtual ICollection<LawSuit> LawSuits { get; set; } = new List<LawSuit>();
+    //public virtual ICollection<LawSuit> LawSuits { get; set; } = new List<LawSuit>();
 
-    public virtual ICollection<SubInstall> SubInstalls { get; set; } = new List<SubInstall>();
+    //public virtual ICollection<SubInstall> SubInstalls { get; set; } = new List<SubInstall>();
 }

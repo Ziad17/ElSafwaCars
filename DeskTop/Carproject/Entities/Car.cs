@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Carproject.Entities;
 
@@ -7,6 +8,7 @@ public partial class Car
 {
     public string? CarModel { get; set; }
 
+    [Key]
     public string CarNumber { get; set; } = null!;
 
     public string? MotorNumber { get; set; }

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Carproject.Entities;
 
 public partial class SubInstall
 {
+    [Key]
     public int Id { get; set; }
 
     public uint BillId { get; set; }
