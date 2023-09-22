@@ -14,6 +14,8 @@ namespace Carproject.UI.Forms
             panel3.Height = button2.Height;
             panel3.Top = button2.Top;
             mainUI1.BringToFront();
+            viewLawSuitsControl.Hide();
+
             //     printTesting();
 
         }
@@ -22,7 +24,7 @@ namespace Carproject.UI.Forms
         public void button2_Click(object sender, EventArgs e)
         {
             payinstall2.Hide();
-
+            viewLawSuitsControl.Hide();
             pictureBox1.Show();
             Sidepanel.Height = button2.Height;
             Sidepanel.Top = button2.Top;
@@ -222,6 +224,19 @@ namespace Carproject.UI.Forms
             panel3.Top = button10.Top;
             printForm.BringToFront();
 
+        }
+
+        private void ViewLawSuits_Click(object sender, EventArgs e)
+        {
+            payinstall2.Hide();
+
+            pictureBox1.Hide();
+            viewLawSuitsControl.Show();
+            Sidepanel.Height = viewLawSuitsButton.Height;
+            Sidepanel.Top = viewLawSuitsButton.Top;
+            panel3.Height = viewLawSuitsButton.Height;
+            panel3.Top = viewLawSuitsButton.Top;
+            viewLawSuitsControl.BringToFront();
         }
     }
 }

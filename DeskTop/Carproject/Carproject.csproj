@@ -280,6 +280,12 @@
     <Compile Include="UI\UserControls\UserChangeUI.Designer.cs">
       <DependentUpon>UserChangeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserControls\ViewLawSuitsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ViewLawSuitsControl.Designer.cs">
+      <DependentUpon>ViewLawSuitsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserControls\View_Bills.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\UserChangeUI.resx">
       <DependentUpon>UserChangeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ViewLawSuitsControl.resx">
+      <DependentUpon>ViewLawSuitsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\View_Bills.resx">
       <DependentUpon>View_Bills.cs</DependentUpon>

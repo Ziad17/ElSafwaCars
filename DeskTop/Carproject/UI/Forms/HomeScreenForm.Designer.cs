@@ -32,6 +32,7 @@ namespace Carproject.UI.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeScreenForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.viewLawSuitsButton = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,14 +48,15 @@ namespace Carproject.UI.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.mainUI1 = new MainUI();
-            this.partui1 = new PartUI();
-            this.printForm = new PrintForm();
-            this.payinstall2 = new View_Bills();
-            this.showcars1 = new Car_Management();
-            this.userChangeUI1 = new UserChangeUI();
-            this.bellUI1 = new BellUI();
-            this.accUI1 = new AccUI();
+            this.mainUI1 = new Carproject.UI.UserControls.MainUI();
+            this.partui1 = new Carproject.UI.UserControls.PartUI();
+            this.printForm = new Carproject.UI.UserControls.PrintForm();
+            this.payinstall2 = new Carproject.UI.UserControls.View_Bills();
+            this.showcars1 = new Carproject.UI.UserControls.Car_Management();
+            this.userChangeUI1 = new Carproject.UI.UserControls.UserChangeUI();
+            this.bellUI1 = new Carproject.UI.UserControls.BellUI();
+            this.accUI1 = new Carproject.UI.UserControls.AccUI();
+            this.viewLawSuitsControl = new Carproject.UI.UserControls.ViewLawSuitsControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +64,7 @@ namespace Carproject.UI.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.panel1.Controls.Add(this.viewLawSuitsButton);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
@@ -79,6 +82,23 @@ namespace Carproject.UI.Forms
             this.panel1.Size = new System.Drawing.Size(180, 760);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // viewLawSuitsButton
+            // 
+            this.viewLawSuitsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewLawSuitsButton.Enabled = false;
+            this.viewLawSuitsButton.FlatAppearance.BorderSize = 0;
+            this.viewLawSuitsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewLawSuitsButton.Font = new System.Drawing.Font("Arabic Typesetting", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewLawSuitsButton.ForeColor = System.Drawing.Color.White;
+            this.viewLawSuitsButton.Location = new System.Drawing.Point(16, 605);
+            this.viewLawSuitsButton.Name = "viewLawSuitsButton";
+            this.viewLawSuitsButton.Size = new System.Drawing.Size(147, 55);
+            this.viewLawSuitsButton.TabIndex = 11;
+            this.viewLawSuitsButton.TabStop = false;
+            this.viewLawSuitsButton.Text = "الشكاوي";
+            this.viewLawSuitsButton.UseVisualStyleBackColor = true;
+            this.viewLawSuitsButton.Click += new System.EventHandler(this.ViewLawSuits_Click);
             // 
             // button10
             // 
@@ -104,7 +124,7 @@ namespace Carproject.UI.Forms
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.Location = new System.Drawing.Point(6, 744);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 16);
+            this.label1.Size = new System.Drawing.Size(166, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Smart team :01285620713";
             // 
@@ -323,6 +343,14 @@ namespace Carproject.UI.Forms
             this.showcars1.Name = "showcars1";
             this.showcars1.Size = new System.Drawing.Size(1100, 525);
             this.showcars1.TabIndex = 3;
+
+            //
+            // LawSuitsView
+            // 
+            this.viewLawSuitsControl.Location = new System.Drawing.Point(0, 0);
+            this.viewLawSuitsControl.Name = "viewLawSuitsControl";
+            this.viewLawSuitsControl.Size = new System.Drawing.Size(1100, 760);
+            this.viewLawSuitsControl.TabIndex = 20;
             // 
             // userChangeUI1
             // 
@@ -347,13 +375,14 @@ namespace Carproject.UI.Forms
             this.accUI1.Size = new System.Drawing.Size(1100, 525);
             this.accUI1.TabIndex = 1;
             // 
-            // Form1
+            // HomeScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 760);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.viewLawSuitsControl);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
@@ -367,7 +396,7 @@ namespace Carproject.UI.Forms
             this.Controls.Add(this.accUI1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "HomeScreenForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ELbashaCars";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -403,9 +432,11 @@ namespace Carproject.UI.Forms
         private Car_Management showcars1;
         private AccUI accUI1;
         public BellUI bellUI1;
+        public ViewLawSuitsControl viewLawSuitsControl;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button button10;
         public PrintForm printForm;
+        public System.Windows.Forms.Button viewLawSuitsButton;
     }
 }
 

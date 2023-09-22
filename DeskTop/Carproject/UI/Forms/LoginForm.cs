@@ -50,24 +50,26 @@ namespace Carproject.UI.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            password.Text = "123456";
             if (username.Text.ToString().Equals("elbasha"))
             {
                 if (password.Text.ToString().Equals(password_right))
                 {
 
-                    if (System.Windows.Forms.Application.OpenForms["Form1"] != null)
+                    if (System.Windows.Forms.Application.OpenForms[nameof(HomeScreenForm)] != null)
                     {
-                        HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
+                        HomeScreenForm homeScreenForm = (HomeScreenForm)System.Windows.Forms.Application.OpenForms[nameof(HomeScreenForm)];
                         ValidatingFunctions.setLOGIN_TOKEN(true);
-                        ValidatingFunctions.signin_signout(new List<Control>(){form1.button3,
-                        form1.button4,
-                        form1.button5,
-                        form1.button6,
-                        form1.button8,
-                        form1.button9,
-                        form1.button10}
+                        ValidatingFunctions.signin_signout(new List<Control>(){homeScreenForm.button3,
+                        homeScreenForm.button4,
+                        homeScreenForm.button5,
+                        homeScreenForm.button6,
+                        homeScreenForm.button8,
+                        homeScreenForm.button9,
+                        homeScreenForm.viewLawSuitsButton,
+                        homeScreenForm.button10}
                         , true);
-                        MainUI main = (MainUI)form1.Controls.OfType<MainUI>().ToList().ElementAt(0);
+                        MainUI main = (MainUI)homeScreenForm.Controls.OfType<MainUI>().ToList().ElementAt(0);
                         main.sign_in.Enabled = false;
                         main.sign_out.Enabled = true;
                     }
