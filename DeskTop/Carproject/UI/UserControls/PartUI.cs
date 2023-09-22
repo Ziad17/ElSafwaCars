@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Carproject.UI.Froms;
+using Carproject.UI.Forms;
 
 namespace Carproject.UI.UserControls
 {

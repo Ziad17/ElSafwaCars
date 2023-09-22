@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using Carproject.UI.Froms;
+using Carproject.UI.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.UserControls

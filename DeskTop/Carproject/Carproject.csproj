@@ -115,35 +115,35 @@
     <Compile Include="UI\UserControls\AccUI.Designer.cs">
       <DependentUpon>AccUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\add_profit.cs">
+    <Compile Include="UI\Forms\add_profit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\add_profit.Designer.cs">
+    <Compile Include="UI\Forms\add_profit.Designer.cs">
       <DependentUpon>add_profit.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\add_withdraw.cs">
+    <Compile Include="UI\Forms\add_withdraw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\add_withdraw.Designer.cs">
+    <Compile Include="UI\Forms\add_withdraw.Designer.cs">
       <DependentUpon>add_withdraw.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\Bill_information_edit.cs">
+    <Compile Include="UI\Forms\Bill_information_edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\Bill_information_edit.Designer.cs">
+    <Compile Include="UI\Forms\Bill_information_edit.Designer.cs">
       <DependentUpon>Bill_information_edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\CarHelperModel.cs" />
-    <Compile Include="UI\Froms\carreturn.cs">
+    <Compile Include="UI\Forms\carreturn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\carreturn.Designer.cs">
+    <Compile Include="UI\Forms\carreturn.Designer.cs">
       <DependentUpon>carreturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\CarsEditDialog.cs">
+    <Compile Include="UI\Forms\CarsEditDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\CarsEditDialog.Designer.cs">
+    <Compile Include="UI\Forms\CarsEditDialog.Designer.cs">
       <DependentUpon>CarsEditDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserControls\Car_Management.cs">
@@ -152,19 +152,13 @@
     <Compile Include="UI\UserControls\Car_Management.Designer.cs">
       <DependentUpon>Car_Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\contr_edit_details.cs">
+    <Compile Include="UI\Forms\contr_edit_details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\contr_edit_details.Designer.cs">
+    <Compile Include="UI\Forms\contr_edit_details.Designer.cs">
       <DependentUpon>contr_edit_details.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\CurrencyInfo.cs" />
-    <Compile Include="UI\Froms\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Froms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\Car.cs" />
     <Compile Include="Entities\Cartransfer.cs" />
@@ -211,28 +205,28 @@
     <Compile Include="PrintForms\SellingContractForm.Designer.cs">
       <DependentUpon>SellingContractForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\ShowCars.cs">
+    <Compile Include="UI\Forms\ShowCars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\ShowCars.Designer.cs">
+    <Compile Include="UI\Forms\ShowCars.Designer.cs">
       <DependentUpon>ShowCars.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\PayInstallDialog.cs">
+    <Compile Include="UI\Forms\PayInstallDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\PayInstallDialog.Designer.cs">
+    <Compile Include="UI\Forms\PayInstallDialog.Designer.cs">
       <DependentUpon>PayInstallDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\Form3.cs">
+    <Compile Include="UI\Forms\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\Form3.Designer.cs">
+    <Compile Include="UI\Forms\Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\Notification.cs">
+    <Compile Include="UI\Forms\Notification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\Notification.Designer.cs">
+    <Compile Include="UI\Forms\Notification.Designer.cs">
       <DependentUpon>Notification.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserControls\BellUI.cs">
@@ -247,17 +241,17 @@
     <Compile Include="UI\UserControls\ContrbuiteAlerts.Designer.cs">
       <DependentUpon>ContrbuiteAlerts.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\Form1.cs">
+    <Compile Include="UI\Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\Form1.Designer.cs">
+    <Compile Include="UI\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Installments.cs" />
-    <Compile Include="UI\Froms\login.cs">
+    <Compile Include="UI\Forms\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\login.Designer.cs">
+    <Compile Include="UI\Forms\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserControls\MainUI.cs">
@@ -273,10 +267,10 @@
     <Compile Include="UI\UserControls\PartUI.Designer.cs">
       <DependentUpon>PartUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\PartWF.cs">
+    <Compile Include="UI\Forms\PartWF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\PartWF.Designer.cs">
+    <Compile Include="UI\Forms\PartWF.Designer.cs">
       <DependentUpon>PartWF.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\ToWord.cs" />
@@ -292,18 +286,18 @@
     <Compile Include="UI\UserControls\View_Bills.Designer.cs">
       <DependentUpon>View_Bills.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Froms\pay_contr.cs">
+    <Compile Include="UI\Forms\pay_contr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\pay_contr.Designer.cs">
+    <Compile Include="UI\Forms\pay_contr.Designer.cs">
       <DependentUpon>pay_contr.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Froms\UnOrgInstaWF.cs">
+    <Compile Include="UI\Forms\UnOrgInstaWF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Froms\UnOrgInstaWF.Designer.cs">
+    <Compile Include="UI\Forms\UnOrgInstaWF.Designer.cs">
       <DependentUpon>UnOrgInstaWF.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\ValidatingFunctions.cs" />
@@ -311,19 +305,19 @@
       <DependentUpon>AccUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\add_profit.resx">
+    <EmbeddedResource Include="UI\Forms\add_profit.resx">
       <DependentUpon>add_profit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\add_withdraw.resx">
+    <EmbeddedResource Include="UI\Forms\add_withdraw.resx">
       <DependentUpon>add_withdraw.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\Bill_information_edit.resx">
+    <EmbeddedResource Include="UI\Forms\Bill_information_edit.resx">
       <DependentUpon>Bill_information_edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\carreturn.resx">
+    <EmbeddedResource Include="UI\Forms\carreturn.resx">
       <DependentUpon>carreturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\CarsEditDialog.resx">
+    <EmbeddedResource Include="UI\Forms\CarsEditDialog.resx">
       <DependentUpon>CarsEditDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -331,12 +325,8 @@
       <DependentUpon>Car_Management.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\contr_edit_details.resx">
+    <EmbeddedResource Include="UI\Forms\contr_edit_details.resx">
       <DependentUpon>contr_edit_details.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserControls\PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
@@ -353,18 +343,18 @@
     <EmbeddedResource Include="PrintForms\SellingContractForm.resx">
       <DependentUpon>SellingContractForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\ShowCars.resx">
+    <EmbeddedResource Include="UI\Forms\ShowCars.resx">
       <DependentUpon>ShowCars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\PayInstallDialog.resx">
+    <EmbeddedResource Include="UI\Forms\PayInstallDialog.resx">
       <DependentUpon>PayInstallDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\Form3.resx">
+    <EmbeddedResource Include="UI\Forms\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\Notification.resx">
+    <EmbeddedResource Include="UI\Forms\Notification.resx">
       <DependentUpon>Notification.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -376,11 +366,11 @@
       <DependentUpon>ContrbuiteAlerts.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\Form1.resx">
+    <EmbeddedResource Include="UI\Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\login.resx">
+    <EmbeddedResource Include="UI\Forms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -391,7 +381,7 @@
     <EmbeddedResource Include="UI\UserControls\PartUI.resx">
       <DependentUpon>PartUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\PartWF.resx">
+    <EmbeddedResource Include="UI\Forms\PartWF.resx">
       <DependentUpon>PartWF.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -401,7 +391,7 @@
     <EmbeddedResource Include="UI\UserControls\View_Bills.resx">
       <DependentUpon>View_Bills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Froms\pay_contr.resx">
+    <EmbeddedResource Include="UI\Forms\pay_contr.resx">
       <DependentUpon>pay_contr.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -415,7 +405,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Froms\UnOrgInstaWF.resx">
+    <EmbeddedResource Include="UI\Forms\UnOrgInstaWF.resx">
       <DependentUpon>UnOrgInstaWF.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
