@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.ComponentModel;
 using System.Data;
-
-using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
-
-
 
 namespace Carproject
 {
-   
     class ValidatingFunctions
     {
         public static bool is_car_registerd;
@@ -26,7 +17,7 @@ namespace Carproject
         private static string INSTALL_ID;
         private static int REMAINING_INSTALLMENTS = 0;
         private static bool LOGIN_TOKEN = false;
-        private static string CONNECTION_STRINGS = "Server=127.0.0.1;port=3306;username=root;password=;database=elbashacars;SslMode=none;Charset=utf8";
+        private static string CONNECTION_STRINGS = "Server=127.0.0.1;port=55000;username=root;password=mysqlpw;database=elbashacars;SslMode=none;";
         //for unorganized installments.cs
         public static int id_contribute;
         public static int id_from_payinstall_to_alerts;
@@ -40,7 +31,6 @@ namespace Carproject
 
         public static bool update_bills_notifications()
         {
-           
             try
             {
                 MySqlConnection con = new MySqlConnection(CONNECTION_STRINGS);
@@ -60,19 +50,18 @@ namespace Carproject
 
                 con.Close();
                 return true;
-
             }
 
             catch (MySqlException ee)
             {
                 MessageBox.Show("خطأ في السيرفر");
-            return false;
+                return false;
             }
-            catch (Exception eee) { MessageBox.Show("خطأ");
-            return false;
+            catch (Exception eee)
+            {
+                MessageBox.Show("خطأ");
+                return false;
             }
-
-           
         }
         public static bool update_contr_notification()
         {
@@ -97,35 +86,26 @@ namespace Carproject
                 return true;
 
             }
-            catch (MySqlException ee)
-            {
-                today_contr_reader = null;
-                pinned_contr_reader = null;
-                
-                MessageBox.Show("خطأ في السيرفر");
-                return false;
-            }
-            catch (Exception eee)
+            catch
             {
                 today_contr_reader = null;
                 pinned_contr_reader = null;
                 MessageBox.Show("خطأ");
                 return false;
             }
-        
         }
 
 
         public static string getDotsIfNumberEqualZero(string number, int numberOfDots)
         {
-           // number = number.Trim();
-            if (int.Parse(number)>0)
+            // number = number.Trim();
+            if (int.Parse(number) > 0)
             {
                 return number.ToString();
             }
             else { return string.Concat(Enumerable.Repeat(".", numberOfDots)); }
         }
-        public static string getDotsIfTextEmpty(string text,int numberOfDots)
+        public static string getDotsIfTextEmpty(string text, int numberOfDots)
         {
             text = text.Trim();
             if (text != null && !text.Equals(""))
@@ -141,33 +121,25 @@ namespace Carproject
 
         }
 
-
         public static DataTable get_pinned_contr()
         {
             return pinned_contr_reader;
 
         }
-        
+
         public static DataTable get_today_alerts()
         {
             return today_notification_reader;
-            
         }
 
 
         public static DataTable get_pinned_alerts()
         {
             return pinned_notification_reader;
-                    
         }
-        
 
 
-        public static string getCONNECTION_STRINGS()
-        { return "Server=127.0.0.1;port=3306;username=root;password=;database=elbashacars;SslMode=none;Charset=utf8"; }
-
-
-
+        public static string getCONNECTION_STRINGS() => "Server=127.0.0.1;port=55000;username=root;password=mysqlpw;database=elbashacars;SslMode=none;";
 
 
         public static void setLOGIN_TOKEN(bool token)
@@ -212,8 +184,6 @@ namespace Carproject
 
         public static void ResetAllControls(List<Control> arr)
         {
-
-
             foreach (Control control in arr)
             {
                 if (control is TextBox)
@@ -243,7 +213,6 @@ namespace Carproject
                 if (control is DataGridView)
                 {
                     DataGridView box = (DataGridView)control;
-                  
                     box.DataSource = null;
                 }
                 if (control is NumericUpDown)
@@ -258,10 +227,10 @@ namespace Carproject
                     box.Value = DateTime.Today;
                 }
             }
-            
+
 
         }
-        public static void signin_signout(List<Control> arr,bool stat)
+        public static void signin_signout(List<Control> arr, bool stat)
         {
             foreach (Control i in arr)
             { i.Enabled = stat; }
@@ -269,8 +238,8 @@ namespace Carproject
 
         public static string invertString(string text)
         {
-           // char[] charArray = text.ToCharArray();
-         //   Array.Reverse(charArray);
+            // char[] charArray = text.ToCharArray();
+            //   Array.Reverse(charArray);
             //return new string(charArray);
             return text;
         }
