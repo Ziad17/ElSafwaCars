@@ -4,9 +4,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class add_withdraw : Form
+    public partial class AddWithdrawForm : Form
     {
-        public add_withdraw()
+        public AddWithdrawForm()
         {
             InitializeComponent();
             take_radio.Checked = true;

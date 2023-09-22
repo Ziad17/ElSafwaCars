@@ -7,9 +7,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class Form3 : Form
+    public partial class ViewContributionsForm : Form
     {
-        public Form3()
+        public ViewContributionsForm()
         {
             InitializeComponent();
         }
@@ -75,7 +75,7 @@ namespace Carproject.UI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
             form1.button5_Click(sender, e);
             this.Close();
         }
@@ -315,7 +315,7 @@ namespace Carproject.UI.Forms
                     int id = int.Parse(bill_search.Rows[index].Cells[0].Value.ToString());
                     ValidatingFunctions.contr_id_inside_profit = id;
                     ValidatingFunctions.id_contribute = id;
-                    contr_edit_details ed = new contr_edit_details();
+                    EditContributionForm ed = new EditContributionForm();
                     ed.ShowDialog();
 
 
@@ -338,7 +338,7 @@ namespace Carproject.UI.Forms
             if (bill_search.Rows.Count > 0)
             {
                 ValidatingFunctions.contr_id_to_add_profit = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
-                add_profit ad = new add_profit();
+                AddProfitFrom ad = new AddProfitFrom();
                 installs_info.DataSource = null;
                 car_info.DataSource = null;
                 ad.ShowDialog();
@@ -465,7 +465,7 @@ namespace Carproject.UI.Forms
             if (bill_search.Rows.Count > 0)
             {
                 ValidatingFunctions.id_contribute = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
-                add_withdraw ad = new add_withdraw();
+                AddWithdrawForm ad = new AddWithdrawForm();
                 installs_info.DataSource = null;
                 car_info.DataSource = null;
                 ad.ShowDialog();

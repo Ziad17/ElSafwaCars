@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Carproject.UI.Forms
 {
-    public partial class Notification : Form
+    public partial class ViewNotificationsForm : Form
     {
-        public Notification()
+        public ViewNotificationsForm()
         {
             InitializeComponent();
         }
@@ -98,7 +98,7 @@ namespace Carproject.UI.Forms
                         DateTime date = (DateTime)installs_today.Rows[index].Cells[4].Value;
                         ValidatingFunctions.date_from_payinstall_to_alerts = date;
                         ValidatingFunctions.id_from_payinstall_to_alerts = id;
-                        PayInstallDialog dg = new PayInstallDialog();
+                        PayInstallmentForm dg = new PayInstallmentForm();
                         //  this.Close();
                         dg.ShowDialog();
                         this.Close();
@@ -114,7 +114,7 @@ namespace Carproject.UI.Forms
                 }
                 else
                 {
-                    login login_form = new login();
+                    LoginForm login_form = new LoginForm();
                     login_form.Show();
                 }
             }
@@ -139,7 +139,7 @@ namespace Carproject.UI.Forms
                             DateTime date = (DateTime)installs_pinned.Rows[index].Cells[4].Value;
                             ValidatingFunctions.date_from_payinstall_to_alerts = date;
                             ValidatingFunctions.id_from_payinstall_to_alerts = id;
-                            PayInstallDialog dg = new PayInstallDialog();
+                            PayInstallmentForm dg = new PayInstallmentForm();
                             dg.ShowDialog();
                             this.Close();
                             //Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
@@ -153,7 +153,7 @@ namespace Carproject.UI.Forms
                     }
                     else
                     {
-                        login login_form = new login();
+                        LoginForm login_form = new LoginForm();
                         login_form.Show();
                     }
                 }

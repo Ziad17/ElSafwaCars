@@ -7,10 +7,10 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class login : Form
+    public partial class LoginForm : Form
     {
         private string password_right;
-        public login()
+        public LoginForm()
         {
             InitializeComponent();
             try
@@ -57,7 +57,7 @@ namespace Carproject.UI.Forms
 
                     if (System.Windows.Forms.Application.OpenForms["Form1"] != null)
                     {
-                        Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                        HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                         ValidatingFunctions.setLOGIN_TOKEN(true);
                         ValidatingFunctions.signin_signout(new List<Control>(){form1.button3,
                         form1.button4,

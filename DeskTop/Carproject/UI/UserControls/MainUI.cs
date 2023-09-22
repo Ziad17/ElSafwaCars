@@ -14,7 +14,7 @@ namespace Carproject.UI.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Notification alert_form = new Notification();
+            ViewNotificationsForm alert_form = new ViewNotificationsForm();
             alert_form.ShowDialog();
 
 
@@ -23,7 +23,7 @@ namespace Carproject.UI.UserControls
         private void button1_Click(object sender, EventArgs e)
         {
 
-            login login_form = new login();
+            LoginForm login_form = new LoginForm();
             login_form.ShowDialog();
 
 
@@ -34,7 +34,7 @@ namespace Carproject.UI.UserControls
             ValidatingFunctions.setLOGIN_TOKEN(false);
             if (System.Windows.Forms.Application.OpenForms["Form1"] != null)
             {
-                Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                 ValidatingFunctions.setLOGIN_TOKEN(false);
                 ValidatingFunctions.signin_signout(new List<Control>(){form1.button3,
                         form1.button4,

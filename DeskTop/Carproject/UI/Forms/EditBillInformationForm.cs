@@ -5,9 +5,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class Bill_information_edit : Form
+    public partial class EditBillInformationForm : Form
     {
-        public Bill_information_edit()
+        public EditBillInformationForm()
         {
             InitializeComponent();
         }
@@ -226,7 +226,7 @@ namespace Carproject.UI.Forms
 
             if (yes == true)
             {
-                UnOrgInstaWF gf = new UnOrgInstaWF();
+                AddInstallmentsForm gf = new AddInstallmentsForm();
                 gf.ShowDialog();
                 this.Close();
             }

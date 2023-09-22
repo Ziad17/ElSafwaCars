@@ -5,9 +5,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class contr_edit_details : Form
+    public partial class EditContributionForm : Form
     {
-        public contr_edit_details()
+        public EditContributionForm()
         {
             InitializeComponent();
         }

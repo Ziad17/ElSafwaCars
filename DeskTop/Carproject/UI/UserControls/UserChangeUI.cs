@@ -79,7 +79,7 @@ namespace Carproject.UI.UserControls
                             old.Text = "";
                             password.Text = "";
                             confirm.Text = "";
-                            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                             MainUI main = (MainUI)form1.Controls.OfType<MainUI>().ToList().ElementAt(0);
                             form1.button2_Click(sender, e);
                             main.sign_out_Click(sender, e);

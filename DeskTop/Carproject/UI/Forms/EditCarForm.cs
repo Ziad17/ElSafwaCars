@@ -6,9 +6,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class CarsEditDialog : Form
+    public partial class EditCarForm : Form
     {
-        public CarsEditDialog()
+        public EditCarForm()
         {
 
             InitializeComponent();
@@ -95,7 +95,7 @@ namespace Carproject.UI.Forms
                     MessageBox.Show("تم بنجاح");
 
 
-                    ShowCars show = (ShowCars)System.Windows.Forms.Application.OpenForms["ShowCars"];
+                    ViewCarsForm show = (ViewCarsForm)System.Windows.Forms.Application.OpenForms["ShowCars"];
 
                     show.refresh_cars(show.sold, show.available);
                     this.Close();
@@ -111,7 +111,7 @@ namespace Carproject.UI.Forms
             catch (MySqlException ee)
             {
                 MessageBox.Show("خطأ في السيرفر");
-                ShowCars show = (ShowCars)System.Windows.Forms.Application.OpenForms["ShowCars"];
+                ViewCarsForm show = (ViewCarsForm)System.Windows.Forms.Application.OpenForms["ShowCars"];
 
                 show.refresh_cars(show.sold, show.available);
                 this.Close();
@@ -120,7 +120,7 @@ namespace Carproject.UI.Forms
             {
                 MessageBox.Show("خطأ");
 
-                ShowCars show = (ShowCars)System.Windows.Forms.Application.OpenForms["ShowCars"];
+                ViewCarsForm show = (ViewCarsForm)System.Windows.Forms.Application.OpenForms["ShowCars"];
 
                 show.refresh_cars(show.sold, show.available);
                 this.Close();
@@ -160,12 +160,12 @@ namespace Carproject.UI.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
             BellUI main = (BellUI)form1.Controls.OfType<BellUI>().ToList().ElementAt(0);
             main.registr_radio.Checked = true;
             form1.button3_Click(sender, e);
             main.re_number.Text = car_num1.Text;
-            ShowCars form11 = (ShowCars)System.Windows.Forms.Application.OpenForms["ShowCars"];
+            ViewCarsForm form11 = (ViewCarsForm)System.Windows.Forms.Application.OpenForms["ShowCars"];
             form11.Close();
             this.Close();
 

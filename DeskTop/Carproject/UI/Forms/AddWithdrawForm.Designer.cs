@@ -1,6 +1,6 @@
 ﻿namespace Carproject.UI.Forms
 {
-    partial class add_withdraw
+    partial class AddWithdrawForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_withdraw));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWithdrawForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.total = new System.Windows.Forms.TextBox();
             this.id = new System.Windows.Forms.TextBox();

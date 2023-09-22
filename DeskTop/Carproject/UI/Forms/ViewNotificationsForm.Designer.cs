@@ -1,6 +1,6 @@
 ﻿namespace Carproject.UI.Forms
 {
-    partial class Notification
+    partial class ViewNotificationsForm
     {
         /// <summary>
         /// Required designer variable.

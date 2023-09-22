@@ -6,12 +6,12 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class carreturn : Form
+    public partial class ReturnCarForm : Form
     {
         private int id;
         private bool registered;
         private string car_num;
-        public carreturn()
+        public ReturnCarForm()
         {
             InitializeComponent();
         }
@@ -132,7 +132,7 @@ namespace Carproject.UI.Forms
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("تم بنجاح");
                     this.Close();
-                    Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                    HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                     View_Bills main = (View_Bills)form1.Controls.OfType<View_Bills>().ToList().ElementAt(0);
                     main.installs_info.DataSource = null;
                     main.car_info.DataSource = null;

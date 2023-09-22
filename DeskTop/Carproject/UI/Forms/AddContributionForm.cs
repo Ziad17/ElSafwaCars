@@ -5,9 +5,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class PartWF : Form
+    public partial class AddContributionForm : Form
     {
-        public PartWF()
+        public AddContributionForm()
         {
             InitializeComponent();
         }
@@ -67,7 +67,7 @@ namespace Carproject.UI.Forms
                             ValidatingFunctions.ResetAllControls(new List<Control>() { contr_name, contr_phone, contr_total_price, contr_first_pay_date, contr_notes, contr_duration });
                             MessageBox.Show("تم بنجاح");
 
-                            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                             form1.button5_Click(sender, e);
                             this.Close();
 

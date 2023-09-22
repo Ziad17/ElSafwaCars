@@ -7,14 +7,14 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class UnOrgInstaWF : Form
+    public partial class AddInstallmentsForm : Form
     {
 
         private int current_value;
         private string error;
         private List<Installments> install_array;
         int insert_count = 0;
-        public UnOrgInstaWF()
+        public AddInstallmentsForm()
         {
             InitializeComponent();
 
@@ -283,7 +283,7 @@ namespace Carproject.UI.Forms
                     }
                     NewBillSingleton.set_installments(install_array);
                     this.Close();
-                    Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                    HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                     BellUI main = (BellUI)form1.Controls.OfType<BellUI>().ToList().ElementAt(0);
                     int counter = 1;
                     foreach (Installments element in NewBillSingleton.get_installments())

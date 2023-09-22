@@ -58,7 +58,7 @@ namespace Carproject.UI.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ShowCars showcars = new ShowCars();
+            ViewCarsForm showcars = new ViewCarsForm();
             //  showcars.Icon = Application.OpenForms["Form1"].Icon;
             showcars.ShowDialog();
 

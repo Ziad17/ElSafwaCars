@@ -20,7 +20,7 @@ namespace Carproject
             Application.SetCompatibleTextRenderingDefault(false);
             MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
             //  Application.Run(new ShowCars());
-            Application.Run(new Form1());
+            Application.Run(new HomeScreenForm());
 
             //     Application.Run(new PrintForms.BillDetailsForm(1));
 

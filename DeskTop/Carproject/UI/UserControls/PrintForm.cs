@@ -50,7 +50,7 @@ namespace Carproject.UI.UserControls
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
             form1.button6_Click(sender, e);
         }
     }

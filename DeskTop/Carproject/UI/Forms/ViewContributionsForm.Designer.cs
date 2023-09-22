@@ -1,6 +1,6 @@
 ﻿namespace Carproject.UI.Forms
 {
-    partial class Form3
+    partial class ViewContributionsForm
     {
         /// <summary>
         /// Required designer variable.

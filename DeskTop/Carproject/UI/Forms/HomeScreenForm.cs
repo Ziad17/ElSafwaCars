@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Carproject.UI.Forms
 {
-    public partial class Form1 : Form
+    public partial class HomeScreenForm : Form
     {
-        public Form1()
+        public HomeScreenForm()
         {
             InitializeComponent();
             Sidepanel.Height = button2.Height;

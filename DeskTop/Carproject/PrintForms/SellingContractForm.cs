@@ -1139,7 +1139,7 @@ rect_title_recieve, format1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
 
             form1.button3_Click(sender, e);
 

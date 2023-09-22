@@ -6,9 +6,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class ShowCars : Form
+    public partial class ViewCarsForm : Form
     {
-        public ShowCars()
+        public ViewCarsForm()
         {
             InitializeComponent();
 
@@ -150,7 +150,7 @@ namespace Carproject.UI.Forms
 
                     string Car_number = available.Rows[index].Cells[0].Value.ToString();
                     ValidatingFunctions.car_num_to_start_car_edit = Car_number;
-                    CarsEditDialog c1 = new CarsEditDialog();
+                    EditCarForm c1 = new EditCarForm();
                     c1.ShowDialog();
                     refresh_cars(sold, available);
 
@@ -199,7 +199,7 @@ namespace Carproject.UI.Forms
 
 
 
-                Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                 MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
                 MySqlCommand cmd = con.CreateCommand();
                 con.Open();
@@ -226,7 +226,7 @@ namespace Carproject.UI.Forms
         {
             string Car_number = search_cb_available.Text.ToString();
             ValidatingFunctions.car_num_to_start_car_edit = Car_number;
-            CarsEditDialog c1 = new CarsEditDialog();
+            EditCarForm c1 = new EditCarForm();
             c1.ShowDialog();
         }
 
@@ -239,7 +239,7 @@ namespace Carproject.UI.Forms
 
 
 
-                Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                 MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
                 MySqlCommand cmd = con.CreateCommand();
                 con.Open();

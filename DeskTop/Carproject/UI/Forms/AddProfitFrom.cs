@@ -4,9 +4,9 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class add_profit : Form
+    public partial class AddProfitFrom : Form
     {
-        public add_profit()
+        public AddProfitFrom()
         {
             InitializeComponent();
         }

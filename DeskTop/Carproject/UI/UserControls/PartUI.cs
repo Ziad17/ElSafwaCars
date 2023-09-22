@@ -13,7 +13,7 @@ namespace Carproject.UI.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PartWF part_form = new PartWF();
+            AddContributionForm part_form = new AddContributionForm();
             part_form.ShowDialog();
 
         }
@@ -21,9 +21,9 @@ namespace Carproject.UI.UserControls
         private void button1_Click(object sender, EventArgs e)
         {
             ValidatingFunctions.id_contribute = 0;
-            Form3 form = new Form3();
+            ViewContributionsForm form = new ViewContributionsForm();
             form.ShowDialog();
-            Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+            HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
             form1.button5_Click(sender, e);
 
         }
@@ -49,7 +49,7 @@ namespace Carproject.UI.UserControls
                     string id = contr_today.Rows[index].Cells[0].Value.ToString();
                     //  MessageBox.Show(id);
                     ValidatingFunctions.id_contribute = int.Parse(id);
-                    Form3 form = new Form3();
+                    ViewContributionsForm form = new ViewContributionsForm();
                     form.ShowDialog();
                     // View_install_by_id(id);
 
@@ -69,7 +69,7 @@ namespace Carproject.UI.UserControls
                     string id = contr_pinned.Rows[index].Cells[0].Value.ToString();
                     // MessageBox.Show(id);
                     ValidatingFunctions.id_contribute = int.Parse(id);
-                    Form3 form = new Form3();
+                    ViewContributionsForm form = new ViewContributionsForm();
                     form.ShowDialog();
                     // View_install_by_id(id);
 

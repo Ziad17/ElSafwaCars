@@ -4,13 +4,13 @@ using MySql.Data.MySqlClient;
 
 namespace Carproject.UI.Forms
 {
-    public partial class PayInstallDialog : Form
+    public partial class PayInstallmentForm : Form
     {
         int id1;
         int selected_install_id;
         int id_bill;
         private bool paid;
-        public PayInstallDialog()
+        public PayInstallmentForm()
         {
             InitializeComponent();
             //install_search_data.MultiSelect = false;
@@ -250,7 +250,7 @@ namespace Carproject.UI.Forms
             if (id1 > 0)
             {
 
-                Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
+                HomeScreenForm form1 = (HomeScreenForm)System.Windows.Forms.Application.OpenForms["Form1"];
                 ValidatingFunctions.id_from_payinstall_to_alerts = id_bill;
                 form1.payinstall2.SELECTION_MODE = form1.payinstall2.MODE_SINGLE;
                 form1.payinstall2.single_id = id_bill;

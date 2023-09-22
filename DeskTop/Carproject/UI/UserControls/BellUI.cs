@@ -299,7 +299,7 @@ namespace Carproject.UI.UserControls
            first_pay_bill.Value);
             if (yes == true)
             {
-                UnOrgInstaWF form = new UnOrgInstaWF();
+                AddInstallmentsForm form = new AddInstallmentsForm();
                 form.ShowDialog();
             }
 

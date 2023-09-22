@@ -536,7 +536,7 @@ namespace Carproject.UI.UserControls
                     {
                         ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(installs_info.SelectedRows[0].Cells[1].Value.ToString());
                         ValidatingFunctions.date_from_payinstall_to_alerts = (DateTime)installs_info.SelectedRows[0].Cells[5].Value;
-                        PayInstallDialog dg = new PayInstallDialog();
+                        PayInstallmentForm dg = new PayInstallmentForm();
                         dg.ShowDialog();
                         ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(installs_info.SelectedRows[0].Cells[1].Value.ToString());
                         fill_information(int.Parse(installs_info.SelectedRows[0].Cells[1].Value.ToString()));
@@ -774,7 +774,7 @@ namespace Carproject.UI.UserControls
                     {
                         ValidatingFunctions.id_to_edit_bill_details = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
                         ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
-                        Bill_information_edit dg = new Bill_information_edit();
+                        EditBillInformationForm dg = new EditBillInformationForm();
                         SELECTION_MODE = MODE_SINGLE;
                         single_id = int.Parse(bill_search.Rows[0].Cells[0].Value.ToString());
 
@@ -788,7 +788,7 @@ namespace Carproject.UI.UserControls
                     {
                         ValidatingFunctions.id_to_edit_bill_details = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
                         ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
-                        Bill_information_edit dg = new Bill_information_edit();
+                        EditBillInformationForm dg = new EditBillInformationForm();
                         SELECTION_MODE = MODE_MULTI;
                         multi_index = bill_search.SelectedRows[0].Index;
                         dg.ShowDialog();
@@ -895,7 +895,7 @@ namespace Carproject.UI.UserControls
                     try
                     {
                         int id_delete = int.Parse(bill_search.SelectedRows[0].Cells[0].Value.ToString());
-                        carreturn carreturn_form = new carreturn();
+                        ReturnCarForm carreturn_form = new ReturnCarForm();
                         carreturn_form.get_id(id_delete);
                         carreturn_form.ShowDialog();
 
