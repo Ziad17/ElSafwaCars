@@ -8,9 +8,28 @@ namespace Carproject
 {
     static class Program
     {
+        public static void RegisterFonts()
+        {
+            //var folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets");
+            var folder = "C:\\Users\\EGYPT_LAPTOP\\Desktop\\";
+            string cairoFontFileUrl = Path.Combine(folder, "Cairo-Medium.ttf");
+            string cairoExtraBoldFontFileUrl = Path.Combine(folder, "Cairo-ExtraBold.ttf");
+            string cairoBoldFontFileUrl = Path.Combine(folder, "Cairo-Bold.ttf");
+
+            var cairoFontFile = File.OpenRead(cairoFontFileUrl);
+            var cairoExtraBoldFontFile = File.OpenRead(cairoExtraBoldFontFileUrl);
+            var cairoBoldFontFile = File.OpenRead(cairoBoldFontFileUrl);
+
+            FontManager.RegisterFont(cairoBoldFontFile);
+            FontManager.RegisterFont(cairoExtraBoldFontFile);
+            FontManager.RegisterFont(cairoFontFile);
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        ///
+        /// 
         [STAThread]
         static void Main()
         {
@@ -70,7 +89,6 @@ namespace Carproject
 
             //}
         }
-
     }
 }
 

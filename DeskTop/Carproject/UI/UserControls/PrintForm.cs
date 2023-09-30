@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Carproject.PrintForms;
 using Carproject.UI.Forms;
 
 namespace Carproject.UI.UserControls
@@ -37,8 +38,7 @@ namespace Carproject.UI.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PrintForms.AllTrafficForm selling_Form = new PrintForms.AllTrafficForm();
-            //Hiding the Border to simulate a fullscreen-experience
+            AllTrafficForm selling_Form = new AllTrafficForm();
 
             selling_Form.ShowDialog();
         }

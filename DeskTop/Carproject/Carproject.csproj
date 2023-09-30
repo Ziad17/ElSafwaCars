@@ -109,6 +109,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrintForms\DocumentType.cs" />
+    <Compile Include="PrintForms\PrintViewModel.cs" />
     <Compile Include="UI\Forms\EditLawSuitForm.cs">
       <SubType>Form</SubType>
     </Compile>
