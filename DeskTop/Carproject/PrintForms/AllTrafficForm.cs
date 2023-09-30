@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using QuestPDF.Fluent;
 using System.Windows.Forms;
+using Carproject.Entities;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
@@ -18,10 +21,34 @@ namespace Carproject.PrintForms
         public static int DefaultFontSize = 14;
         public static PageSize PageSize = PageSizes.A4;
         public static int ValueFontSize = 14;
+        private List<Car> _cars;
+        private List<Bill> _bills;
 
         public AllTrafficForm()
         {
             InitializeComponent();
+            PopulateCars();
+            PopulateBuyers();
+        }
+
+        public void PopulateCars()
+        {
+            using var context = new ElbashacarsContext();
+            _cars = context.Cars.ToList();
+            foreach (var car in _cars)
+            {
+                carNumberTextBox.Items.Add(car.CarNumber);
+            }
+        }
+
+        public void PopulateBuyers()
+        {
+            using var context = new ElbashacarsContext();
+            _bills = context.Bills.ToList();
+            foreach (var bill in _bills)
+            {
+                buyerNameTextBox.Items.Add(bill.BuyerName);
+            }
         }
 
         private void restrict_button_Click(object sender, System.EventArgs e)
@@ -2478,20 +2505,27 @@ namespace Carproject.PrintForms
                 TrafficNumber = "118",
             };
 
+            IDocument document = null;
+
             switch (documentType)
             {
                 case DocumentType.Selling:
-                    CreateSellingDocumentInCash(printViewModel);
+                    document = CreateSellingDocumentInCash(printViewModel);
                     break;
                 case DocumentType.SellingWithOwnership:
-                    SellingWithReservingOwnership(printViewModel);
+                    document = SellingWithReservingOwnership(printViewModel);
                     break;
                 case DocumentType.Quittance:
-                    Quittance(printViewModel);
+                    document = Quittance(printViewModel);
                     break;
                 case DocumentType.AnnualRenewal:
-                    AnnualRenewal(printViewModel);
+                    document = AnnualRenewal(printViewModel);
                     break;
+            }
+
+            if (document != null)
+            {
+                document.GeneratePdfAndShow();
             }
         }
 
@@ -2518,6 +2552,29 @@ namespace Carproject.PrintForms
         private void renewal_button_Click(object sender, EventArgs e)
         {
             Print(DocumentType.AnnualRenewal);
+        }
+
+        private void carNumberTextBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var carNumber = carNumberTextBox.Items[carNumberTextBox.SelectedIndex].ToString();
+            var car = _cars.FirstOrDefault(c => c.CarNumber == carNumber);
+            if (car == null)
+                return;
+
+            modelTextBox.Text = car.CarModel;
+            shasehTextBox.Text = car.ShasehNumber;
+            carMarkTextBox.Text = car.CarMark;
+            motorTextBox.Text = car.MotorNumber;
+        }
+
+        private void buyerNameTextBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var buyerName = buyerNameTextBox.Items[buyerNameTextBox.SelectedIndex].ToString();
+            var bill = _bills.FirstOrDefault(c => c.BuyerName == buyerName);
+            if (bill == null)
+                return;
+
+            sellingDateTextBox.Text = bill.CreatedDate.ToString("d");
         }
     }
 }

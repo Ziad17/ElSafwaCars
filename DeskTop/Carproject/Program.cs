@@ -4,6 +4,7 @@ using System.IO;
 using Carproject.UI.Forms;
 using MySql.Data.MySqlClient;
 using QuestPDF.Drawing;
+using QuestPDF.Infrastructure;
 
 namespace Carproject
 {
@@ -11,6 +12,8 @@ namespace Carproject
     {
         public static void RegisterFonts()
         {
+            QuestPDF.Settings.License = LicenseType.Community;
+
             var folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");
             string cairoFontFileUrl = Path.Combine(folder, "Cairo-Medium.ttf");
             string cairoExtraBoldFontFileUrl = Path.Combine(folder, "Cairo-ExtraBold.ttf");

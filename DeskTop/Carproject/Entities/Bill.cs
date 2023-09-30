@@ -34,8 +34,6 @@ public class Bill
     [Column("First_pay_date")]
 
     public DateTime? FirstPayDate { get; set; }
-    [Column("car_number")]
-    public string? CarNumber { get; set; }
     [Column("created_date")]
 
     public DateTime CreatedDate { get; set; }

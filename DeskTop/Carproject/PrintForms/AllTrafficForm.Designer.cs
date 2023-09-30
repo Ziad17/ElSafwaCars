@@ -257,6 +257,7 @@
             this.buyerNameTextBox.Size = new System.Drawing.Size(497, 33);
             this.buyerNameTextBox.Sorted = true;
             this.buyerNameTextBox.TabIndex = 1018;
+            this.buyerNameTextBox.SelectedIndexChanged += new System.EventHandler(this.buyerNameTextBox_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -562,6 +563,7 @@
             this.carNumberTextBox.Size = new System.Drawing.Size(142, 33);
             this.carNumberTextBox.Sorted = true;
             this.carNumberTextBox.TabIndex = 1033;
+            this.carNumberTextBox.SelectedIndexChanged += new System.EventHandler(this.carNumberTextBox_SelectedIndexChanged);
             // 
             // label13
             // 

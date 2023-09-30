@@ -12,7 +12,7 @@ public class ElbashacarsContext : DbContext
 
     public virtual DbSet<Bill> Bills { get; set; }
 
-    //public virtual DbSet<Car> Cars { get; set; }
+    public virtual DbSet<Car> Cars { get; set; }
 
     //public virtual DbSet<Cartransfer> CarTransfers { get; set; }
 
