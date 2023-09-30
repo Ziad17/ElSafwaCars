@@ -21,33 +21,21 @@ namespace Carproject.PrintForms
         public static int DefaultFontSize = 14;
         public static PageSize PageSize = PageSizes.A4;
         public static int ValueFontSize = 14;
-        private List<Car> _cars;
-        private List<Bill> _bills;
+        private List<SellingContract> _contracts;
 
         public AllTrafficForm()
         {
             InitializeComponent();
-            PopulateCars();
-            PopulateBuyers();
+            PopulateContracts();
         }
 
-        public void PopulateCars()
+        public void PopulateContracts()
         {
             using var context = new ElbashacarsContext();
-            _cars = context.Cars.ToList();
-            foreach (var car in _cars)
+            _contracts = context.SellingContracts.ToList();
+            foreach (var contract in _contracts)
             {
-                carNumberTextBox.Items.Add(car.CarNumber);
-            }
-        }
-
-        public void PopulateBuyers()
-        {
-            using var context = new ElbashacarsContext();
-            _bills = context.Bills.ToList();
-            foreach (var bill in _bills)
-            {
-                buyerNameTextBox.Items.Add(bill.BuyerName);
+                carNumberTextBox.Items.Add(contract.CarNumber);
             }
         }
 
@@ -2557,24 +2545,27 @@ namespace Carproject.PrintForms
         private void carNumberTextBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var carNumber = carNumberTextBox.Items[carNumberTextBox.SelectedIndex].ToString();
-            var car = _cars.FirstOrDefault(c => c.CarNumber == carNumber);
-            if (car == null)
+            var contract = _contracts.FirstOrDefault(c => c.CarNumber == carNumber);
+            if (contract == null)
                 return;
 
-            modelTextBox.Text = car.CarModel;
-            shasehTextBox.Text = car.ShasehNumber;
-            carMarkTextBox.Text = car.CarMark;
-            motorTextBox.Text = car.MotorNumber;
+            modelTextBox.Text = contract.CarModel;
+            shasehTextBox.Text = contract.CarShaseh;
+            colorTextBox.Text = contract.CarColor;
+            carMarkTextBox.Text = contract.CarMark;
+            carTypeTextBox.Text = contract.CarKind;
+            motorTextBox.Text = contract.CarMotor;
+            carVersionTextBox.Text = contract.CarMark;
+            shapeTextBox.Text = contract.CarShape;
+            buyerNameTextBox.Text = contract.BuyerName;
+            buyerAddressTextBox.Text = contract.BuyerAddress;
+            nationalIdTextBox.Text = contract.BuyerCard;
+            sellingDateTextBox.Text = contract.CreatedDate?.ToString("d");
         }
 
-        private void buyerNameTextBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void AllTrafficForm_Load_1(object sender, EventArgs e)
         {
-            var buyerName = buyerNameTextBox.Items[buyerNameTextBox.SelectedIndex].ToString();
-            var bill = _bills.FirstOrDefault(c => c.BuyerName == buyerName);
-            if (bill == null)
-                return;
 
-            sellingDateTextBox.Text = bill.CreatedDate.ToString("d");
         }
     }
 }

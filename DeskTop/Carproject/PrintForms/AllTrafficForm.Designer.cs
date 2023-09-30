@@ -34,12 +34,12 @@
             this.finishing_button = new System.Windows.Forms.Button();
             this.renewal_button = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buyerNameTextBox = new System.Windows.Forms.TextBox();
             this.nationalIdTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.sellingDateTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.buyerAddressTextBox = new System.Windows.Forms.TextBox();
-            this.buyerNameTextBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -170,12 +170,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buyerNameTextBox);
             this.groupBox2.Controls.Add(this.nationalIdTextBox);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.sellingDateTextBox);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.buyerAddressTextBox);
-            this.groupBox2.Controls.Add(this.buyerNameTextBox);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(20, 341);
@@ -187,6 +187,17 @@
             this.groupBox2.TabIndex = 1059;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "معلومات المشتري";
+            // 
+            // buyerNameTextBox
+            // 
+            this.buyerNameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.buyerNameTextBox.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyerNameTextBox.Location = new System.Drawing.Point(257, 23);
+            this.buyerNameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.buyerNameTextBox.Name = "buyerNameTextBox";
+            this.buyerNameTextBox.Size = new System.Drawing.Size(549, 38);
+            this.buyerNameTextBox.TabIndex = 1061;
+            this.buyerNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nationalIdTextBox
             // 
@@ -244,20 +255,6 @@
             this.buyerAddressTextBox.Size = new System.Drawing.Size(798, 38);
             this.buyerAddressTextBox.TabIndex = 1056;
             this.buyerAddressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buyerNameTextBox
-            // 
-            this.buyerNameTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.buyerNameTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.buyerNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.buyerNameTextBox.FormattingEnabled = true;
-            this.buyerNameTextBox.Location = new System.Drawing.Point(309, 29);
-            this.buyerNameTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.buyerNameTextBox.Name = "buyerNameTextBox";
-            this.buyerNameTextBox.Size = new System.Drawing.Size(497, 33);
-            this.buyerNameTextBox.Sorted = true;
-            this.buyerNameTextBox.TabIndex = 1018;
-            this.buyerNameTextBox.SelectedIndexChanged += new System.EventHandler(this.buyerNameTextBox_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -618,7 +615,6 @@
             this.trafficTextBox.Location = new System.Drawing.Point(586, 36);
             this.trafficTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.trafficTextBox.Name = "trafficTextBox";
-            this.trafficTextBox.ReadOnly = true;
             this.trafficTextBox.Size = new System.Drawing.Size(271, 38);
             this.trafficTextBox.TabIndex = 1062;
             this.trafficTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -670,7 +666,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button renewal_button;
         private System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.ComboBox buyerNameTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -710,5 +705,6 @@
         public System.Windows.Forms.TextBox modelTextBox;
         public System.Windows.Forms.TextBox trafficTextBox;
         private System.Windows.Forms.Label label18;
+        public System.Windows.Forms.TextBox buyerNameTextBox;
     }
 }

@@ -28,7 +28,7 @@ public class ElbashacarsContext : DbContext
 
     //public virtual DbSet<Profit> Profits { get; set; }
 
-    //public virtual DbSet<SellingContract> SellingContracts { get; set; }
+    public virtual DbSet<SellingContract> SellingContracts { get; set; }
 
     //public virtual DbSet<SubInstall> SubInstalls { get; set; }
 
