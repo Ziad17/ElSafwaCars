@@ -11,6 +11,7 @@ namespace Carproject.UI.Forms
             InitializeComponent();
             Sidepanel.Height = button2.Height;
             Sidepanel.Top = button2.Top;
+            viewLawSuitsControl.Hide();
             panel3.Height = button2.Height;
             panel3.Top = button2.Top;
             mainUI1.BringToFront();
@@ -40,6 +41,7 @@ namespace Carproject.UI.Forms
         {
             payinstall2.Hide();
 
+            viewLawSuitsControl.Hide();
             pictureBox1.Show();
             Sidepanel.Height = button3.Height;
             Sidepanel.Top = button3.Top;
@@ -54,6 +56,7 @@ namespace Carproject.UI.Forms
         {
             payinstall2.Hide();
 
+            viewLawSuitsControl.Hide();
             pictureBox1.Show();
             Sidepanel.Height = button4.Height;
             Sidepanel.Top = button4.Top;
@@ -131,6 +134,7 @@ namespace Carproject.UI.Forms
             Sidepanel.Height = button6.Height;
             Sidepanel.Top = button6.Top;
             pictureBox1.Hide();
+            viewLawSuitsControl.Hide();
             payinstall2.Show();
             panel3.Height = button6.Height;
             panel3.Top = button6.Top;
@@ -169,6 +173,7 @@ namespace Carproject.UI.Forms
         {
             payinstall2.Hide();
 
+            viewLawSuitsControl.Hide();
             pictureBox1.Show();
             Sidepanel.Height = button8.Height;
             Sidepanel.Top = button8.Top;
@@ -186,6 +191,7 @@ namespace Carproject.UI.Forms
 
         {
             payinstall2.Hide();
+            viewLawSuitsControl.Hide();
 
             pictureBox1.Show();
             Sidepanel.Height = button9.Height;
@@ -218,6 +224,7 @@ namespace Carproject.UI.Forms
             payinstall2.Hide();
 
             pictureBox1.Show();
+            viewLawSuitsControl.Hide();
             Sidepanel.Height = button10.Height;
             Sidepanel.Top = button10.Top;
             panel3.Height = button10.Height;

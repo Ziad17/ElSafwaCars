@@ -14,27 +14,34 @@ public class Bill
     [Column("Buyer_name")]
     public string? BuyerName { get; set; }
 
+    [Column("Buyer_phone")]
     public string BuyerPhone { get; set; } = null!;
-
+    [Column("Inserunce_phone")]
     public string InseruncePhone { get; set; } = null!;
+    [Column("Restrict_sell_for")]
 
     public string? RestrictSellFor { get; set; }
 
     public string? Notes { get; set; }
 
+    [Column("Total_price")]
     public uint TotalPrice { get; set; }
+    [Column("Paid_price")]
 
     public uint PaidPrice { get; set; }
-
+    [Column("To_pay_price")]
     public uint ToPayPrice { get; set; }
+    [Column("First_pay_date")]
 
     public DateTime? FirstPayDate { get; set; }
-
+    [Column("car_number")]
     public string? CarNumber { get; set; }
+    [Column("created_date")]
 
     public DateTime CreatedDate { get; set; }
 
     public bool? Going { get; set; }
+    [Column("stop_date")]
 
     public DateTime? StopDate { get; set; }
 

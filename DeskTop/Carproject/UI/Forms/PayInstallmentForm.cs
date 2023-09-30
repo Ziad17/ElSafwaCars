@@ -180,7 +180,7 @@ namespace Carproject.UI.Forms
             // ValidatingFunctions.id_from_payinstall_to_alerts = 0;
 
 
-            // ValidatingFunctions.ResetAllControls(new List<Control>() { 
+            // ValidatingFunctions.ResetAllControls(new List<Control>() {
             // pay_buyer_name,
             //  pay_buyer_num,
             // pay_insurence_num,

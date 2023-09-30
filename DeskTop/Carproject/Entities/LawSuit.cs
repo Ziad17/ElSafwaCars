@@ -21,7 +21,7 @@ public partial class LawSuit
     public string? Judgement { get; set; }
 
     [DisplayName("جلسة المعارضة")]
-    public DateTime? OpposingSessionDate { get; set; }
+    public string? OpposingSessionDate { get; set; }
 
     [DisplayName("حكم المعارضة")]
     public string? OpposingSessionJudgement { get; set; }
@@ -40,6 +40,8 @@ public partial class LawSuit
 
     [DisplayName("تاريخ الإنشاء")]
     public DateTime? CreationDate { get; set; }
+
+    public string? Notes { get; set; }
 
     public virtual Bill? Bill { get; set; }
 }

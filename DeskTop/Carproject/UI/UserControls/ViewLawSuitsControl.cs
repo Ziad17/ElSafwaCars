@@ -11,6 +11,7 @@ namespace Carproject.UI.UserControls
 {
     public partial class ViewLawSuitsControl : UserControl
     {
+        private bool searchAll;
         public int SELECTION_MODE;
         public int MODE_MULTI = 1;
         public int MODE_SINGLE = 2;
@@ -21,9 +22,7 @@ namespace Carproject.UI.UserControls
         {
             InitializeComponent();
             populate_names();
-
         }
-
 
 
         public void fill_information(int id)
@@ -117,29 +116,8 @@ namespace Carproject.UI.UserControls
 
         public void PayInstall_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (SELECTION_MODE == MODE_MULTI)
-                {
-                    //  MessageBox.Show("ddd");
-
-                    SearchAll_Click(sender, e);
-                    lawSuitsGrid.Rows[multi_index].Selected = true;
-                }
-                else if (SELECTION_MODE == MODE_SINGLE)
-                {
-                    // MessageBox.Show("ddd");
-
-                    search_by_id(single_id);
-                    lawSuitsGrid.Rows[0].Selected = true;
-
-                }
-            }
-            catch (Exception eeee)
-            {
-
-            }
-
+            searchAll = true;
+            RefreshData(sender, e);
         }
 
         public void populate_names()
@@ -167,72 +145,6 @@ namespace Carproject.UI.UserControls
             name_search.SelectionStart = name_search.Text.Length;
         }
 
-        public void search_by_id(int id_to_go)
-        {
-            //string error = "";
-            //try
-            //{
-
-
-            //    installs_info.DataSource = null;
-            //    car_info.DataSource = null;
-            //    sub_installs_info.DataSource = null;
-            //    bill_search.DataSource = null;
-
-            //    MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
-            //    con.Open();
-            //    MySqlCommand cmd = con.CreateCommand();
-            //    string command;
-            //    MySqlDataAdapter rd;
-
-
-            //    command = "SELECT bills.id,bills.Buyer_name,bills.Buyer_phone,bills.Inserunce_phone,bills.created_date,bills.Total_price,bills.Paid_price,(SELECT SUM(installs.Total_price-installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date<=CURRENT_DATE() AND installs.To_pay_price!=0 AND installs.Stat=false ) AS 'topay',(SELECT SUM(installs.Paid_price) FROM installs WHERE installs.bill_id=bills.id) as 'paid',(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id AND installs.Paying_date>CURRENT_DATE()),bills.going,(SELECT SUM(installs.To_pay_price) FROM installs WHERE installs.bill_id=bills.id ),bills.Notes  FROM bills WHERE bills.id=@id;";
-
-            //    cmd.CommandText = command;
-            //    cmd.Parameters.AddWithValue("@id", id_to_go);
-
-
-
-            //    rd = new MySqlDataAdapter(cmd);
-            //    DataTable dt = new DataTable();
-            //    rd.Fill(dt);
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        bill_search.DataSource = dt;
-            //        bill_search.Columns[0].HeaderText = "رقم الفاتورة";
-            //        bill_search.Columns[1].HeaderText = "أسم المشتري";
-            //        bill_search.Columns[2].HeaderText = "هاتف المشتري";
-            //        bill_search.Columns[3].HeaderText = "هاتف الضامن";
-            //        bill_search.Columns[4].HeaderText = "تاريخ الانشاء";
-            //        bill_search.Columns[4].DefaultCellStyle.Format = "yyyy/MM/dd";
-            //        bill_search.Columns[5].HeaderText = "الاجمالي";
-
-            //        bill_search.Columns[6].HeaderText = "المقدم";
-
-            //        bill_search.Columns[7].HeaderText = " مستحق";
-            //        bill_search.Columns[8].HeaderText = " مدفوع";
-            //        bill_search.Columns[9].HeaderText = " متبقي";
-            //        bill_search.Columns[10].HeaderText = "جارية";
-            //        bill_search.Columns[11].HeaderText = "إجمالي المتبقي";
-            //        bill_search.Columns[11].Width += 10;
-
-            //        bill_search.Columns[12].HeaderText = "ملاحظات";
-
-            //        fill_information(id_to_go);
-
-
-
-
-            //    }
-            //    else
-            //    { MessageBox.Show("لا يوجد نتائج"); }
-            //    con.Close();
-
-            //}
-            //catch (MySqlException ee) { MessageBox.Show("خطأ في السيرفر"); }
-            //catch (Exception eee) { MessageBox.Show("خطأ"); }
-
-        }
 
         private void SearchClick(object sender, EventArgs e)
         {
@@ -364,25 +276,6 @@ namespace Carproject.UI.UserControls
             }
         }
 
-        private void bill_search_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1)
-            {
-                if (lawSuitsGrid.Rows.Count > 0)
-                {
-
-                    int index = lawSuitsGrid.SelectedRows[0].Index;
-
-
-                    ValidatingFunctions.do_not_edit = (bool)lawSuitsGrid.Rows[index].Cells[10].Value;
-
-                    int id = int.Parse(lawSuitsGrid.Rows[index].Cells[0].Value.ToString());
-                    fill_information(id);
-
-                }
-            }
-        }
-
         public void get_ins_info()
         {
             //try
@@ -437,39 +330,6 @@ namespace Carproject.UI.UserControls
         }
 
 
-        private void installs_info_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //int index = bill_search.SelectedRows[0].Index;
-
-
-            //ValidatingFunctions.do_not_edit = (bool)bill_search.Rows[index].Cells[10].Value;
-            //if (ValidatingFunctions.do_not_edit == true)
-            //{
-            //    if (e.RowIndex > -1)
-            //    {
-            //        if (installs_info.Rows.Count > 0)
-            //        {
-            //            ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(installs_info.SelectedRows[0].Cells[1].Value.ToString());
-            //            ValidatingFunctions.date_from_payinstall_to_alerts = (DateTime)installs_info.SelectedRows[0].Cells[5].Value;
-            //            PayInstallmentForm dg = new PayInstallmentForm();
-            //            dg.ShowDialog();
-            //            ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(installs_info.SelectedRows[0].Cells[1].Value.ToString());
-            //            fill_information(int.Parse(installs_info.SelectedRows[0].Cells[1].Value.ToString()));
-            //            get_ins_info();
-
-            //        }
-            //    }
-            //}
-            //else { MessageBox.Show("لا يمكن تعديل فاتورة منتهية"); }
-
-
-
-
-
-        }
-
-
-
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -477,49 +337,7 @@ namespace Carproject.UI.UserControls
             lawSuitsGrid.DataSource = null;
         }
 
-        private void lawSuitsGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index1 = lawSuitsGrid.SelectedRows[0].Index;
 
-
-            ValidatingFunctions.do_not_edit = (bool)lawSuitsGrid.Rows[index1].Cells[10].Value;
-            if (ValidatingFunctions.do_not_edit == true)
-            {
-                if (e.RowIndex > -1)
-                {
-                    if (lawSuitsGrid.Rows.Count == 1)
-                    {
-                        ValidatingFunctions.id_to_edit_bill_details = int.Parse(lawSuitsGrid.SelectedRows[0].Cells[0].Value.ToString());
-                        ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(lawSuitsGrid.SelectedRows[0].Cells[0].Value.ToString());
-                        EditBillInformationForm dg = new EditBillInformationForm();
-                        SELECTION_MODE = MODE_SINGLE;
-                        single_id = int.Parse(lawSuitsGrid.Rows[0].Cells[0].Value.ToString());
-
-                        dg.ShowDialog();
-
-                        PayInstall_Load(sender, e);
-
-                    }
-                    else if (lawSuitsGrid.Rows.Count > 1)
-
-                    {
-                        ValidatingFunctions.id_to_edit_bill_details = int.Parse(lawSuitsGrid.SelectedRows[0].Cells[0].Value.ToString());
-                        ValidatingFunctions.id_from_payinstall_to_alerts = int.Parse(lawSuitsGrid.SelectedRows[0].Cells[0].Value.ToString());
-                        EditBillInformationForm dg = new EditBillInformationForm();
-                        SELECTION_MODE = MODE_MULTI;
-                        multi_index = lawSuitsGrid.SelectedRows[0].Index;
-                        dg.ShowDialog();
-
-                        PayInstall_Load(sender, e);
-
-
-                    }
-                }
-            }
-            else { MessageBox.Show("لا يمكن تعديل فاتورة منتهية"); }
-
-
-        }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -529,14 +347,17 @@ namespace Carproject.UI.UserControls
         private void SearchAll_Click(object sender, EventArgs e)
         {
             using var context = new ElbashacarsContext();
+            lawSuitsGrid.DataSource = null;
+            lawSuitsGrid.Refresh();
 
-            SELECTION_MODE = MODE_MULTI;
+            searchAll = true;
             try
             {
 
                 var lawSuits = context.LawSuits.Include(c => c.Bill).OrderByDescending(c => c.CreationDate)
                     .Select(c => new
                     {
+                        c.Id,
                         c.BillId,
                         c.Bill.BuyerName,
                         c.CaseNumber,
@@ -549,18 +370,18 @@ namespace Carproject.UI.UserControls
                 if (lawSuits.Count > 0)
                 {
                     lawSuitsGrid.DataSource = lawSuits;
-                    lawSuitsGrid.Columns[0].HeaderText = "رقم الفاتورة";
-                    lawSuitsGrid.Columns[1].HeaderText = "الإسم";
-                    lawSuitsGrid.Columns[2].HeaderText = "رقم القضية";
-                    lawSuitsGrid.Columns[3].HeaderText = "رقم الحصر";
-                    lawSuitsGrid.Columns[4].HeaderText = "الحكم";
-                    lawSuitsGrid.Columns[5].HeaderText = "المحامي";
-                    lawSuitsGrid.Columns[6].HeaderText = " الشاكي";
+                    lawSuitsGrid.Refresh();
+                    lawSuitsGrid.Columns[0].HeaderText = "م";
+                    lawSuitsGrid.Columns[0].Width = 15;
+                    lawSuitsGrid.Columns[1].HeaderText = "رقم الفاتورة";
+                    lawSuitsGrid.Columns[2].HeaderText = "الإسم";
+                    lawSuitsGrid.Columns[3].HeaderText = "رقم القضية";
+                    lawSuitsGrid.Columns[4].HeaderText = "رقم الحصر";
+                    lawSuitsGrid.Columns[5].HeaderText = "الحكم";
+                    lawSuitsGrid.Columns[6].HeaderText = "المحامي";
+                    lawSuitsGrid.Columns[7].HeaderText = " الشاكي";
                 }
-                else
-                {
-                    MessageBox.Show("لا يوجد نتائج");
-                }
+
             }
             catch (Exception ee)
             {
@@ -568,11 +389,6 @@ namespace Carproject.UI.UserControls
             }
         }
 
-
-        private void bill_search_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void name_search_KeyDown(object sender, KeyEventArgs e)
         {
@@ -611,6 +427,36 @@ namespace Carproject.UI.UserControls
 
         }
 
+        private void AddLawSuitButtonClick(object sender, EventArgs e)
+        {
+            var addLawSuitForm = new AddLawSuitForm(0);
+
+            var result = addLawSuitForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+                RefreshData(sender, e);
+        }
+
+        private void LawSuitsGridDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var item = lawSuitsGrid.SelectedRows[0];
+            var id = item.Cells[0].Value.ToString();
+
+            if (int.TryParse(id, out _) && int.Parse(id) != 0)
+            {
+                var editForm = new EditLawSuitForm(int.Parse(id));
+                var result = editForm.ShowDialog();
+
+                if (result == DialogResult.OK)
+                    RefreshData(sender, e);
+            }
+        }
+
+        public void RefreshData(object sender, EventArgs e)
+        {
+            if (searchAll)
+                SearchAll_Click(sender, e);
+        }
     }
 
 }

@@ -6,7 +6,7 @@ namespace Carproject.Entities;
 [DbConfigurationType(typeof(MySqlEFConfiguration))]
 public class ElbashacarsContext : DbContext
 {
-    public ElbashacarsContext() : base("Server=127.0.0.1;port=55000;username=root;password=mysqlpw;database=elbashacars;SslMode=none;")
+    public ElbashacarsContext() : base(ValidatingFunctions.getCONNECTION_STRINGS())
     {
     }
 

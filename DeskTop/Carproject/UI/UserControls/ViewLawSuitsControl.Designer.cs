@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.AddLawSuitButton = new System.Windows.Forms.Button();
             this.lawSuitsGrid = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.name_radio = new System.Windows.Forms.RadioButton();
@@ -52,59 +53,79 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.AddLawSuitButton);
             this.groupBox2.Controls.Add(this.lawSuitsGrid);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.groupBox2.Location = new System.Drawing.Point(3, 12);
+            this.groupBox2.Location = new System.Drawing.Point(4, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(1094, 745);
+            this.groupBox2.Size = new System.Drawing.Size(1459, 917);
             this.groupBox2.TabIndex = 134;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "الفواتير";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // AddLawSuitButton
+            // 
+            this.AddLawSuitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddLawSuitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.AddLawSuitButton.FlatAppearance.BorderSize = 0;
+            this.AddLawSuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLawSuitButton.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.AddLawSuitButton.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.AddLawSuitButton.Location = new System.Drawing.Point(23, 83);
+            this.AddLawSuitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AddLawSuitButton.Name = "AddLawSuitButton";
+            this.AddLawSuitButton.Size = new System.Drawing.Size(179, 58);
+            this.AddLawSuitButton.TabIndex = 141;
+            this.AddLawSuitButton.TabStop = false;
+            this.AddLawSuitButton.Text = "إضافة شكوى";
+            this.AddLawSuitButton.UseVisualStyleBackColor = false;
+            this.AddLawSuitButton.Click += new System.EventHandler(this.AddLawSuitButtonClick);
             // 
             // lawSuitsGrid
             // 
             this.lawSuitsGrid.AllowUserToAddRows = false;
             this.lawSuitsGrid.AllowUserToDeleteRows = false;
             this.lawSuitsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 13F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.lawSuitsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 13F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.lawSuitsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.lawSuitsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 13F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.lawSuitsGrid.DefaultCellStyle = dataGridViewCellStyle5;
-            this.lawSuitsGrid.Location = new System.Drawing.Point(17, 133);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 13F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.lawSuitsGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.lawSuitsGrid.Location = new System.Drawing.Point(29, 205);
+            this.lawSuitsGrid.Margin = new System.Windows.Forms.Padding(4);
             this.lawSuitsGrid.MultiSelect = false;
             this.lawSuitsGrid.Name = "lawSuitsGrid";
             this.lawSuitsGrid.ReadOnly = true;
             this.lawSuitsGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lawSuitsGrid.RowHeadersVisible = false;
             this.lawSuitsGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lawSuitsGrid.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lawSuitsGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.lawSuitsGrid.RowTemplate.Height = 30;
             this.lawSuitsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.lawSuitsGrid.Size = new System.Drawing.Size(1057, 593);
+            this.lawSuitsGrid.Size = new System.Drawing.Size(1409, 730);
             this.lawSuitsGrid.TabIndex = 131;
             this.lawSuitsGrid.TabStop = false;
-            this.lawSuitsGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bill_search_CellClick);
-            this.lawSuitsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bill_search_CellContentClick);
-            this.lawSuitsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lawSuitsGrid_CellDoubleClick);
+            this.lawSuitsGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LawSuitsGridDoubleClick);
             // 
             // groupBox5
             // 
@@ -118,10 +139,12 @@
             this.groupBox5.Controls.Add(this.search);
             this.groupBox5.Controls.Add(this.date_search);
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.groupBox5.Location = new System.Drawing.Point(512, 27);
+            this.groupBox5.Location = new System.Drawing.Point(683, 33);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox5.Size = new System.Drawing.Size(562, 100);
+            this.groupBox5.Size = new System.Drawing.Size(749, 123);
             this.groupBox5.TabIndex = 130;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "طريقة البحث";
@@ -129,9 +152,10 @@
             // name_radio
             // 
             this.name_radio.AutoSize = true;
-            this.name_radio.Location = new System.Drawing.Point(424, 27);
+            this.name_radio.Location = new System.Drawing.Point(565, 33);
+            this.name_radio.Margin = new System.Windows.Forms.Padding(4);
             this.name_radio.Name = "name_radio";
-            this.name_radio.Size = new System.Drawing.Size(54, 17);
+            this.name_radio.Size = new System.Drawing.Size(65, 21);
             this.name_radio.TabIndex = 123;
             this.name_radio.Text = "الأسم";
             this.name_radio.UseVisualStyleBackColor = true;
@@ -143,10 +167,11 @@
             this.name_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.name_search.Font = new System.Drawing.Font("Tahoma", 13F);
             this.name_search.FormattingEnabled = true;
-            this.name_search.Location = new System.Drawing.Point(327, 60);
+            this.name_search.Location = new System.Drawing.Point(436, 74);
+            this.name_search.Margin = new System.Windows.Forms.Padding(4);
             this.name_search.Name = "name_search";
             this.name_search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_search.Size = new System.Drawing.Size(224, 29);
+            this.name_search.Size = new System.Drawing.Size(297, 35);
             this.name_search.Sorted = true;
             this.name_search.TabIndex = 143;
             this.name_search.Visible = false;
@@ -156,9 +181,10 @@
             // date_radio
             // 
             this.date_radio.AutoSize = true;
-            this.date_radio.Location = new System.Drawing.Point(344, 27);
+            this.date_radio.Location = new System.Drawing.Point(459, 33);
+            this.date_radio.Margin = new System.Windows.Forms.Padding(4);
             this.date_radio.Name = "date_radio";
-            this.date_radio.Size = new System.Drawing.Size(81, 17);
+            this.date_radio.Size = new System.Drawing.Size(100, 21);
             this.date_radio.TabIndex = 124;
             this.date_radio.Text = "تاريخ الانشاء";
             this.date_radio.UseVisualStyleBackColor = true;
@@ -167,7 +193,8 @@
             // id_search
             // 
             this.id_search.BackColor = System.Drawing.SystemColors.Window;
-            this.id_search.Location = new System.Drawing.Point(344, 69);
+            this.id_search.Location = new System.Drawing.Point(459, 85);
+            this.id_search.Margin = new System.Windows.Forms.Padding(4);
             this.id_search.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -175,7 +202,7 @@
             0});
             this.id_search.Name = "id_search";
             this.id_search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.id_search.Size = new System.Drawing.Size(191, 20);
+            this.id_search.Size = new System.Drawing.Size(255, 24);
             this.id_search.TabIndex = 128;
             this.id_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.id_search.Visible = false;
@@ -190,9 +217,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(163, 41);
+            this.button1.Location = new System.Drawing.Point(217, 50);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 47);
+            this.button1.Size = new System.Drawing.Size(89, 58);
             this.button1.TabIndex = 141;
             this.button1.TabStop = false;
             this.button1.Text = "الكل";
@@ -202,9 +230,10 @@
             // id_radio
             // 
             this.id_radio.AutoSize = true;
-            this.id_radio.Location = new System.Drawing.Point(479, 27);
+            this.id_radio.Location = new System.Drawing.Point(639, 33);
+            this.id_radio.Margin = new System.Windows.Forms.Padding(4);
             this.id_radio.Name = "id_radio";
-            this.id_radio.Size = new System.Drawing.Size(77, 17);
+            this.id_radio.Size = new System.Drawing.Size(94, 21);
             this.id_radio.TabIndex = 125;
             this.id_radio.Text = "رقم الفاتورة";
             this.id_radio.UseVisualStyleBackColor = true;
@@ -218,9 +247,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Location = new System.Drawing.Point(6, 41);
+            this.button3.Location = new System.Drawing.Point(8, 50);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 47);
+            this.button3.Size = new System.Drawing.Size(179, 58);
             this.button3.TabIndex = 140;
             this.button3.TabStop = false;
             this.button3.Text = "تفريغ الجدول";
@@ -235,9 +265,10 @@
             this.search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search.Font = new System.Drawing.Font("Arabic Typesetting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.search.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.search.Location = new System.Drawing.Point(246, 41);
+            this.search.Location = new System.Drawing.Point(328, 50);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(67, 47);
+            this.search.Size = new System.Drawing.Size(89, 58);
             this.search.TabIndex = 127;
             this.search.TabStop = false;
             this.search.Text = "بحث";
@@ -249,9 +280,10 @@
             this.date_search.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
             this.date_search.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.date_search.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.date_search.Location = new System.Drawing.Point(334, 66);
+            this.date_search.Location = new System.Drawing.Point(445, 81);
+            this.date_search.Margin = new System.Windows.Forms.Padding(4);
             this.date_search.Name = "date_search";
-            this.date_search.Size = new System.Drawing.Size(210, 24);
+            this.date_search.Size = new System.Drawing.Size(279, 28);
             this.date_search.TabIndex = 129;
             this.date_search.TabStop = false;
             this.date_search.Visible = false;
@@ -259,11 +291,12 @@
             // 
             // ViewLawSuitsControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewLawSuitsControl";
-            this.Size = new System.Drawing.Size(1100, 760);
+            this.Size = new System.Drawing.Size(1467, 935);
             this.Load += new System.EventHandler(this.PayInstall_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lawSuitsGrid)).EndInit();
@@ -288,5 +321,6 @@
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button search;
         private System.Windows.Forms.DateTimePicker date_search;
+        public System.Windows.Forms.Button AddLawSuitButton;
     }
 }

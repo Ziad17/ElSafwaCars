@@ -17,7 +17,7 @@ namespace Carproject
         private static string INSTALL_ID;
         private static int REMAINING_INSTALLMENTS = 0;
         private static bool LOGIN_TOKEN = false;
-        private static string CONNECTION_STRINGS = "Server=127.0.0.1;port=55000;username=root;password=mysqlpw;database=elbashacars;SslMode=none;";
+        private static string CONNECTION_STRINGS = "Server=127.0.0.1;port=3306;username=root;password=mysqlpw;database=elbashacars;SslMode=none;";
         //for unorganized installments.cs
         public static int id_contribute;
         public static int id_from_payinstall_to_alerts;
@@ -139,7 +139,7 @@ namespace Carproject
         }
 
 
-        public static string getCONNECTION_STRINGS() => "Server=127.0.0.1;port=55000;username=root;password=mysqlpw;database=elbashacars;SslMode=none;";
+        public static string getCONNECTION_STRINGS() => CONNECTION_STRINGS;
 
 
         public static void setLOGIN_TOKEN(bool token)
