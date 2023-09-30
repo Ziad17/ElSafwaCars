@@ -128,6 +128,7 @@
             this.selling_button.TabStop = false;
             this.selling_button.Text = "مبايعة";
             this.selling_button.UseVisualStyleBackColor = false;
+            this.selling_button.Click += new System.EventHandler(this.selling_button_Click);
             // 
             // finishing_button
             // 
@@ -146,6 +147,7 @@
             this.finishing_button.TabStop = false;
             this.finishing_button.Text = "مخالصة";
             this.finishing_button.UseVisualStyleBackColor = false;
+            this.finishing_button.Click += new System.EventHandler(this.finishing_button_Click);
             // 
             // renewal_button
             // 
@@ -164,6 +166,7 @@
             this.renewal_button.TabStop = false;
             this.renewal_button.Text = "تجديد سنوي";
             this.renewal_button.UseVisualStyleBackColor = false;
+            this.renewal_button.Click += new System.EventHandler(this.renewal_button_Click);
             // 
             // groupBox2
             // 
@@ -650,6 +653,7 @@
             this.Name = "AllTrafficForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "طباعة";
+            this.Load += new System.EventHandler(this.AllTrafficForm_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using Carproject.UI.Forms;
 using MySql.Data.MySqlClient;
+using QuestPDF.Drawing;
 
 namespace Carproject
 {
@@ -10,8 +11,7 @@ namespace Carproject
     {
         public static void RegisterFonts()
         {
-            //var folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets");
-            var folder = "C:\\Users\\EGYPT_LAPTOP\\Desktop\\";
+            var folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");
             string cairoFontFileUrl = Path.Combine(folder, "Cairo-Medium.ttf");
             string cairoExtraBoldFontFileUrl = Path.Combine(folder, "Cairo-ExtraBold.ttf");
             string cairoBoldFontFileUrl = Path.Combine(folder, "Cairo-Bold.ttf");
@@ -29,7 +29,7 @@ namespace Carproject
         /// The main entry point for the application.
         /// </summary>
         ///
-        /// 
+        ///
         [STAThread]
         static void Main()
         {
@@ -39,6 +39,7 @@ namespace Carproject
             Application.SetCompatibleTextRenderingDefault(false);
             MySqlConnection con = new MySqlConnection(ValidatingFunctions.getCONNECTION_STRINGS());
             //  Application.Run(new ShowCars());
+            RegisterFonts();
             Application.Run(new HomeScreenForm());
 
             //     Application.Run(new PrintForms.BillDetailsForm(1));
@@ -94,7 +95,7 @@ namespace Carproject
 
 
 
-// //  MySQLDump.StartInfo.Arguments = @"mysqldump -uroot -p -h localhost elbashacars > C:\Users\Home\Desktop "; 
+// //  MySQLDump.StartInfo.Arguments = @"mysqldump -uroot -p -h localhost elbashacars > C:\Users\Home\Desktop ";
 
 //    //string theDump = MySQLDump.StandardOutput.ReadToEnd();
 // //   MySQLDump.WaitForExit();
@@ -144,7 +145,7 @@ namespace Carproject
 //    Penalty_clause TEXT,
 //    Auth_date DATETIME,
 //    Created_date  DATETIME,
-//    Created_time  DATETIME 
+//    Created_time  DATETIME
 
 
 //);
