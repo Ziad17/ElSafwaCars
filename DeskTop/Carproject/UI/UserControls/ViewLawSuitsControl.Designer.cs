@@ -35,15 +35,15 @@
             this.AddLawSuitButton = new System.Windows.Forms.Button();
             this.lawSuitsGrid = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.name_radio = new System.Windows.Forms.RadioButton();
-            this.name_search = new System.Windows.Forms.ComboBox();
-            this.date_radio = new System.Windows.Forms.RadioButton();
+            this.caseNumberComboBox = new System.Windows.Forms.ComboBox();
             this.id_search = new System.Windows.Forms.NumericUpDown();
+            this.name_search = new System.Windows.Forms.ComboBox();
+            this.name_radio = new System.Windows.Forms.RadioButton();
+            this.caseNumberRadioButton = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.id_radio = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
             this.search = new System.Windows.Forms.Button();
-            this.date_search = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lawSuitsGrid)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -129,15 +129,15 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.name_radio);
-            this.groupBox5.Controls.Add(this.name_search);
-            this.groupBox5.Controls.Add(this.date_radio);
+            this.groupBox5.Controls.Add(this.caseNumberComboBox);
             this.groupBox5.Controls.Add(this.id_search);
+            this.groupBox5.Controls.Add(this.name_search);
+            this.groupBox5.Controls.Add(this.name_radio);
+            this.groupBox5.Controls.Add(this.caseNumberRadioButton);
             this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.id_radio);
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Controls.Add(this.search);
-            this.groupBox5.Controls.Add(this.date_search);
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 8F);
             this.groupBox5.Location = new System.Drawing.Point(683, 33);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
@@ -149,51 +149,25 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "طريقة البحث";
             // 
-            // name_radio
+            // caseNumberComboBox
             // 
-            this.name_radio.AutoSize = true;
-            this.name_radio.Location = new System.Drawing.Point(565, 33);
-            this.name_radio.Margin = new System.Windows.Forms.Padding(4);
-            this.name_radio.Name = "name_radio";
-            this.name_radio.Size = new System.Drawing.Size(65, 21);
-            this.name_radio.TabIndex = 123;
-            this.name_radio.Text = "الأسم";
-            this.name_radio.UseVisualStyleBackColor = true;
-            this.name_radio.CheckedChanged += new System.EventHandler(this.name_radio_CheckedChanged);
-            // 
-            // name_search
-            // 
-            this.name_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.name_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.name_search.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.name_search.FormattingEnabled = true;
-            this.name_search.Location = new System.Drawing.Point(436, 74);
-            this.name_search.Margin = new System.Windows.Forms.Padding(4);
-            this.name_search.Name = "name_search";
-            this.name_search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_search.Size = new System.Drawing.Size(297, 35);
-            this.name_search.Sorted = true;
-            this.name_search.TabIndex = 143;
-            this.name_search.Visible = false;
-            this.name_search.SelectedIndexChanged += new System.EventHandler(this.name_search_SelectedIndexChanged);
-            this.name_search.TextChanged += new System.EventHandler(this.name_search_TextChanged);
-            // 
-            // date_radio
-            // 
-            this.date_radio.AutoSize = true;
-            this.date_radio.Location = new System.Drawing.Point(459, 33);
-            this.date_radio.Margin = new System.Windows.Forms.Padding(4);
-            this.date_radio.Name = "date_radio";
-            this.date_radio.Size = new System.Drawing.Size(100, 21);
-            this.date_radio.TabIndex = 124;
-            this.date_radio.Text = "تاريخ الانشاء";
-            this.date_radio.UseVisualStyleBackColor = true;
-            this.date_radio.CheckedChanged += new System.EventHandler(this.date_radio_CheckedChanged_1);
+            this.caseNumberComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.caseNumberComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.caseNumberComboBox.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.caseNumberComboBox.FormattingEnabled = true;
+            this.caseNumberComboBox.Location = new System.Drawing.Point(444, 73);
+            this.caseNumberComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.caseNumberComboBox.Name = "caseNumberComboBox";
+            this.caseNumberComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.caseNumberComboBox.Size = new System.Drawing.Size(297, 35);
+            this.caseNumberComboBox.Sorted = true;
+            this.caseNumberComboBox.TabIndex = 144;
+            this.caseNumberComboBox.Visible = false;
             // 
             // id_search
             // 
             this.id_search.BackColor = System.Drawing.SystemColors.Window;
-            this.id_search.Location = new System.Drawing.Point(459, 85);
+            this.id_search.Location = new System.Drawing.Point(478, 74);
             this.id_search.Margin = new System.Windows.Forms.Padding(4);
             this.id_search.Maximum = new decimal(new int[] {
             10000000,
@@ -208,6 +182,47 @@
             this.id_search.Visible = false;
             this.id_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.id_search_KeyDown);
             this.id_search.MouseClick += new System.Windows.Forms.MouseEventHandler(this.id_search_MouseClick);
+            // 
+            // name_search
+            // 
+            this.name_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.name_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.name_search.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.name_search.FormattingEnabled = true;
+            this.name_search.Location = new System.Drawing.Point(444, 73);
+            this.name_search.Margin = new System.Windows.Forms.Padding(4);
+            this.name_search.Name = "name_search";
+            this.name_search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.name_search.Size = new System.Drawing.Size(297, 35);
+            this.name_search.Sorted = true;
+            this.name_search.TabIndex = 143;
+            this.name_search.Visible = false;
+            this.name_search.SelectedIndexChanged += new System.EventHandler(this.name_search_SelectedIndexChanged);
+            this.name_search.TextChanged += new System.EventHandler(this.name_search_TextChanged);
+            // 
+            // name_radio
+            // 
+            this.name_radio.AutoSize = true;
+            this.name_radio.Location = new System.Drawing.Point(565, 33);
+            this.name_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.name_radio.Name = "name_radio";
+            this.name_radio.Size = new System.Drawing.Size(65, 21);
+            this.name_radio.TabIndex = 123;
+            this.name_radio.Text = "الأسم";
+            this.name_radio.UseVisualStyleBackColor = true;
+            this.name_radio.CheckedChanged += new System.EventHandler(this.name_radio_CheckedChanged);
+            // 
+            // caseNumberRadioButton
+            // 
+            this.caseNumberRadioButton.AutoSize = true;
+            this.caseNumberRadioButton.Location = new System.Drawing.Point(442, 33);
+            this.caseNumberRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.caseNumberRadioButton.Name = "caseNumberRadioButton";
+            this.caseNumberRadioButton.Size = new System.Drawing.Size(92, 21);
+            this.caseNumberRadioButton.TabIndex = 124;
+            this.caseNumberRadioButton.Text = "رقم القضية";
+            this.caseNumberRadioButton.UseVisualStyleBackColor = true;
+            this.caseNumberRadioButton.CheckedChanged += new System.EventHandler(this.CaseNumebrRadioCheckedChanged);
             // 
             // button1
             // 
@@ -275,20 +290,6 @@
             this.search.UseVisualStyleBackColor = false;
             this.search.Click += new System.EventHandler(this.SearchClick);
             // 
-            // date_search
-            // 
-            this.date_search.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
-            this.date_search.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.date_search.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.date_search.Location = new System.Drawing.Point(445, 81);
-            this.date_search.Margin = new System.Windows.Forms.Padding(4);
-            this.date_search.Name = "date_search";
-            this.date_search.Size = new System.Drawing.Size(279, 28);
-            this.date_search.TabIndex = 129;
-            this.date_search.TabStop = false;
-            this.date_search.Visible = false;
-            this.date_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.date_search_KeyDown);
-            // 
             // ViewLawSuitsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -314,13 +315,13 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.RadioButton name_radio;
         private System.Windows.Forms.ComboBox name_search;
-        private System.Windows.Forms.RadioButton date_radio;
+        private System.Windows.Forms.RadioButton caseNumberRadioButton;
         private System.Windows.Forms.NumericUpDown id_search;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton id_radio;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button search;
-        private System.Windows.Forms.DateTimePicker date_search;
         public System.Windows.Forms.Button AddLawSuitButton;
+        private System.Windows.Forms.ComboBox caseNumberComboBox;
     }
 }
